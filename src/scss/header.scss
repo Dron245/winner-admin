@@ -1,0 +1,54 @@
+.header {
+
+	&__container {
+		// outline: 1px solid;
+		padding-left: toRem(0);
+		padding-top: toRem(2);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__left {
+		display: flex;
+		align-items: center;
+		column-gap: toRem(20);
+	}
+
+	&__logo {
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: toRem(16);
+		// line-height: 1.4;
+		@media (max-width:$mobile){
+			 display: none; 
+		}
+	}
+
+	&__right {
+		// display: flex;
+		// align-items: center;
+		// column-gap: toRem(8);
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		column-gap: toRem(8);
+		@media (max-width:$mobile){
+			 display: none; 
+		}
+	}
+
+	&__text {
+		// line-height: 1.4;
+	}
+
+	&__menu {
+		@media (min-width:$mobile){
+			 display: none; 
+		}
+	}
+}

@@ -1,0 +1,50 @@
+//====================================================================================================
+.footer {
+	margin-bottom: toRem(2);
+	@media (max-width:$mobile){
+		 display: none; 
+	}
+	&__container {
+		padding-right: 0;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		
+	}
+
+	&__item {
+		margin-right: toRem(2);
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: toRem(65) toRem(95) toRem(63) toRem(95);
+		border-radius: toRem(15);
+		background-color: $cveta-glavnye-seryy;
+	}
+
+	&__text {
+		font-weight: 500;
+		// line-height: 1.4;
+	}
+
+	&__counter {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: toRem(5) toRem(11);
+		border-radius: 10px;
+		background: #CBC6B3;
+		width: 30px;
+		height: 30px;
+		right: 10px;
+		bottom: 10px;
+		&_two {
+			border-radius: 10px;
+			background: rgba(137, 139, 138, 0.50);
+		}
+	}
+}
+
+//====================================================================================================
