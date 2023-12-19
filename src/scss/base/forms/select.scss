@@ -11,31 +11,49 @@
 	&__title {
 		color: inherit;
 		text-align: left;
-		border: 1px solid #d9d9d9;
+		border: 1px solid $fon;
 		background-color: #fff;
 		cursor: pointer;
 		width: 100%;
-		border-radius: 4px;
+		border-radius: toRem(15);
+		transition: background-color 0.3s;
+		._select-open & {
+			border-radius: toRem(15) toRem(15) 0 0;
+			background-color: $fon;
+			border-color: $obvodka;
+		}
+		@media (max-width:$mobile){
+			 border-radius: toRem(15); 
+		}
+		&:hover{
+			background-color: $fon;
+		}
 	}
 	// .select__value
 	&__value {
 		display: flex;
 		min-width: 0;
 		align-items: center;
-		height: toRem(30);
-		padding: 0 toRem(15);
+		height: toRem(60);
+		// padding: 0 toRem(15);
+		padding: toRem(17) toRem(18) toRem(18) toRem(20);
 		gap: toRem(10);
 		> * {
 			flex: 1 1 auto;
 		}
+		@media (max-width:$mobile){
+			 height: toRem(50);
+			 padding: toRem(12) toRem(16) toRem(13) toRem(16);
+		}
 		&:after {
 			content: "";
 			align-self: stretch;
-			flex: 0 0 10px;
+			flex: 0 0 1.5rem;
 			transition: all 0.3s ease 0s;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			background: url('@img/generalimg/arrow-sel.svg') 0 0 no-repeat;
 			._select-open & {
 				transform: rotate(-180deg);
 			}
@@ -53,6 +71,11 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+		font-size: toRem(18);
+		font-weight: 500;
+		@media (max-width:$mobile){
+			 font-size: toRem(12); 
+		}
 	}
 	// .select__text
 	&__text {
@@ -69,16 +92,19 @@
 	// .select__options
 	&__options {
 		color: #000;
+		background-color: $fon;
 		position: absolute;
 		top: calc(100% - toRem(1));
-		border-radius: 0 0 4px 4px;
+		border-radius: 0 0 0.9375rem 0.9375rem;
 		min-width: 100%;
 		left: 0;
-		background-color: #fff;
 		border-top: 0;
-		border: 1px solid #d9d9d9;
+		border: 1px solid $obvodka;
 		border-top: 0;
 		padding: 10px 0px 5px 0px;
+		._select-open & {
+			position: relative;
+		}
 	}
 	// .select__scroll
 	&__scroll {
@@ -88,28 +114,96 @@
 		max-height: toRem(200);
 		// Стили скроллбара
 		.simplebar-scrollbar {
+			// opacity: 1;
+				// width: 4px;
+				border-radius: 4px;
+				background-color: $mainColor;
 			&::before {
-				//opacity: 1;
+				// border-radius: 5px;
 			}
 		}
 	}
 	// .select__option
 	&__option {
+		position: relative;
+		display: flex;
+		align-items: center;
+		column-gap: toRem(10);
 		width: 100%;
 		text-align: left;
 		cursor: pointer;
-		padding: 5px 15px;
+		padding: 1.5rem 1.25rem;
+		padding-left: toRem(50);
 		color: inherit;
+		&:not(:last-child) {
+			border-bottom: 1px solid $obvodka;
+		}
 		&._select-selected {
 			background-color: #eee;
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background: #d9d9d9;
+				background: #e0dfdc;
+				font-weight: 500;
+			}
+		}
+		@media (max-width:$mobile){
+			 padding: 1rem;
+			 column-gap: toRem(8);
+			 padding-left: toRem(44);
+			 font-size: toRem(12);
+		}
+		&::before{
+			content:'';
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			background: $obvodka;
+			border-radius: 20px;
+			left: 20px;
+		}
+		&.option-img {
+			padding-left: toRem(76);
+			font-weight: 500;
+			@media (max-width:$mobile){
+				 padding-left: toRem(63); 
+			}
+			&:hover{
+				&::before {
+					background-color:rgba(28, 28, 34, 0.8)
+				}
+			}
+			&::before{
+				content:'';
+				// display: flex;
+				// align-items: center;
+				// justify-content: center;
+				width: 40px;
+				height: 40px;
+				border-radius: 10px;
+				background-color: $mainColor;
+				transition: background-color 0.3s ;
+				@media (max-width:$mobile){
+					 width: 32px;
+					 height: 32px;
+					 background-size: cover; 
+					 left: 23px;
+				}
+			}
+			&::after{
+				content:'';
+				position: absolute;
+				width: 24px;
+				height: 24px;
+				background: url('@img/generalimg/add.png') 0 0 no-repeat;
+				left: 28px;
+				@media (max-width:$mobile){
+					 left: 27px; 
+				}
 			}
 		}
 	}
-
+	
 	// Конструкция дополнительных данных
 	&__row {
 		display: inline-flex;
@@ -133,6 +227,7 @@
 
 	// Состояние селекта
 	&._select-open {
+		
 	}
 	&._select-disabled {
 	}
@@ -149,4 +244,10 @@
 // Тег
 ._select-tag {
 	cursor: pointer;
+}
+
+@media (max-width:$mobile){
+	.option-img.select__options::before{
+	  left: 23px;
+	} 
 }

@@ -1,1 +1,25 @@
 // Заголовки, общие БЄМ блоки и прочее...
+.cell{
+	padding: toRem(20);
+	border-radius: toRem(20);
+	background-color: #fff;
+	@media (max-width:$mobile){
+		 padding: toRem(16);
+		 border-radius: toRem(15); 
+	}
+}
+
+.icon {
+	display: flex;
+	width: 40px;
+	height: 40px;
+	padding: 12px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	background-color: $fon;
+}
+.wrapper .page .simplebar-vertical {
+	width: 4px;
+	margin-right: 2px;
+}

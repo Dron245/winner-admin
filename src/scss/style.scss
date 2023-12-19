@@ -25,18 +25,18 @@ $fontSize: toRem(14); // где 14(px) - размер шрифта по умол
 // Основные цвета
 $mainColor: #1c1c22; // Цвет шрифта по умолчанию
 
-$cveta-glavnye-fon: #ebeae6;
+$fon: #ebeae6;
+$obvodka: #d4d3cf;
 $cveta-glavnye-seryy: #e0dfdc;
 $cveta-glavnye-belyy: #fff;
 // $cveta-glavnye-chernyy: #1c1c22;
 $cveta-tekst-chernyy: #1c1c2280;
 $cveta-tekst-belyy: #ffffff80;
-$cveta-elementy-obvodka: #d4d3cf;
 $cveta-elementy-plashki: #323238;
 $cveta-dopolnitelnye-zelenyy-100: #698850;
-$cveta-dopolnitelnye-zelenyy-10: rgba(105, 136, 80, 0.1);
+$cveta-dopolnitelnye-zelenyy-10: #6988501a;
 $cveta-dopolnitelnye-krasnyy-100: #906969;
-$cveta-dopolnitelnye-krasnyy-10: rgba(144, 105, 105, 0.1);
+$cveta-dopolnitelnye-krasnyy-10: #9069691a;
 
 // Палитра цветов
 // @import "base/colors-palette";
@@ -91,7 +91,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	background-color: $cveta-glavnye-fon;
+	background-color: $fon;
 	// line-height: 1.4;
 	@supports (overflow: clip) {
 		overflow: clip;
@@ -166,4 +166,6 @@ body {
 @import "footer";
 
 // Подключение стилей отдельных страниц
-@import "home";
+// @import "home";
+@import "choosegame1";
+// @import "choosegame3";
