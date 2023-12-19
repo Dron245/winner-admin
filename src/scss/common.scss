@@ -23,3 +23,17 @@
 	width: 4px;
 	margin-right: 2px;
 }
+
+.options::-webkit-scrollbar {
+	width: 12px;               /* width of the entire scrollbar */
+	// height: 24px;
+ }
+ .options::-webkit-scrollbar-track {
+	background: $fon;        /* color of the tracking area */
+	border-radius: 100px;
+ }
+ .options::-webkit-scrollbar-thumb {
+	background-color: $mainColor;    /* color of the scroll thumb */
+	border-radius: 20px;       /* roundness of the scroll thumb */
+	border: 4px solid $fon;  /* creates padding around scroll thumb */
+ }

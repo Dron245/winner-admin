@@ -30,7 +30,7 @@
 
 // <RADIO>
 // Сниппет (HTML): opt
-// @import "radio";
+ @import "radio";
 
 // <SELECT>
 // Сниппет (HTML): sel
@@ -51,3 +51,157 @@
 // <CALENDAR>
 // Сниппет (HTML):
 // @import "datepicker";
+
+.form-select {
+	
+	&__item-first {
+		display: flex;
+		min-width: 0;
+		align-items: center;
+		justify-content: space-between;
+		color: inherit;
+		text-align: left;
+		border: 1px solid $fon;
+		background-color: #fff;
+		cursor: pointer;
+		width: 100%;
+		border-radius: toRem(15);
+		transition: background-color 0.3s;
+		padding: toRem(17) toRem(18) toRem(18) toRem(20);
+		font-size: toRem(18);
+		font-weight: 500;
+		height: toRem(60);
+		.select-open & {
+			border-color: #D4D3CF;
+			background-color: $fon;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			border-bottom: none;
+		}
+		@media (max-width:$mobile){
+			height: toRem(50);
+			padding: toRem(12) toRem(16) toRem(13) toRem(16);
+		}
+		& img {
+			transition: transform 0.3s;
+			.select-open & {
+				 transform: rotate(180deg);
+			}
+		}
+		@media (any-hover: hover){
+			&:hover{
+				background-color: #f4f4f1;
+			}
+		}
+		
+		&:active {
+			background-color: $fon;
+		}
+	}
+
+	&__simplebar {
+		width: 100%;
+		display: flex;
+	}
+	&__drop-menu {
+		display: flex;
+		flex-direction: column;
+		// display: none;
+		visibility: hidden;
+		position: absolute;
+		// top: -110%;
+		
+		width: 100%;
+		color: #000;
+		background-color: $fon;
+		max-height: 361px;
+		border-radius: 0 0 0.9375rem 0.9375rem;
+		min-width: 100%;
+		left: 0;
+		// border-top: 0;
+		border: 1px solid $obvodka;
+		border-top: 0;
+		// padding: 10px 0px 5px 0px;
+		// transition: all 0.3s;
+		.select-open & {
+			overflow: hidden;
+			overflow: auto;
+			// top: 100%;
+			// display: block;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+.options {
+
+	&__item {
+		flex: 1 0 100%;
+		width: 100%;
+		&:not(:last-child) {
+			border-bottom: 1px solid $obvodka;
+		}
+		&_button {
+			padding: toRem(20);
+			@media (max-width:$mobile){
+				 order: -1; 
+			}
+		}
+		
+		&:hover{
+			background-color: $cveta-glavnye-seryy;
+			font-weight: 500;
+		}
+		
+	}
+
+	&__input {
+	}
+
+	&__label {
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		column-gap: toRem(16);
+		font-weight: 500;
+		@media (max-width:$mobile){
+			order: -1;
+			 column-gap: toRem(8);
+			 font-size: toRem(12);
+		}
+	}
+}
+.button-options {
+
+	&__img {
+		display: flex;
+		
+		width: 2.5rem;
+		height: 2.5rem;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0.625rem;
+		background-color: $mainColor;
+		transition: opacity 0.3s;
+		&:hover{
+			opacity: 0.8;
+		}
+		&:active{
+			opacity: 0.6;
+		}
+		@media (max-width:$mobile){
+			 width: 2rem;
+			 height: 2rem; 
+		}
+	}
+}
+.button {
+
+	&__title {
+	}
+}

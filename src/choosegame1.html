@@ -9,14 +9,41 @@
 			<main class="page">
 				<section class="page__choosegame choosegame">
 					<div class="choosegame__container">
-						<div class="choosegame__select cell">
-							<select data-scroll  name="form[]" data-class-modif="form">
-								<option value="" selected>Выберите игру</option>
-								<option value="1">Найди число</option>
-								<option value="2">Найди большее число</option>
-								<option value="3">Найди большее число</option>
-								<option data-class="option-img" value="4">Добавить игру</option>
-							</select>
+						<div class="choosegame__wrapper cell">
+							<form class="form-select" action="#" method="POST">
+								<div class="form-select__item-first">
+									<span>Выберите игру</span>
+									<div class="form-select__arrow">
+										<img src="@img/generalimg/arrow-sel.svg" alt="">
+									</div>
+								</div>
+								<div  class="form-select__drop-menu options">
+									<div class="options__item">
+										<input autocomplete="off" type="radio" id="o_1" value="1" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
+										<label for="o_1" class="options__label">Примеры</label>
+									</div>
+									<div class="options__item">
+										<input autocomplete="off" type="radio" id="o_2" value="2" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
+										<label for="o_2" class="options__label">Найти число</label>
+									</div>
+									<div class="options__item">
+										<input autocomplete="off" type="radio" id="o_3" value="3" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
+										<label for="o_3" class="options__label">Найди большее число</label>
+									</div>
+									<div class="options__item">
+										<input autocomplete="off" type="radio" id="o_4" value="4" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
+										<label for="o_4" class="options__label">Найди меньшее число</label>
+									</div>
+									<div class="options__item options__item_button">
+										<button type="button" class="options__button button-options">
+											<div class="button-options__img">
+												<img src="@img/generalimg/add.svg" alt="">
+											</div>
+											<span class="button__title">Создать новую игру</span>
+										</button>
+									</div>
+								</div>
+							</form>
 						</div>
 					</div>
 				</section>

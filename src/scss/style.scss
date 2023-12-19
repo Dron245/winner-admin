@@ -115,6 +115,10 @@ body {
 @if ($responsiveType==1) {
 	// Отзывчивая
 	[class*="__container"] {
+		@media (max-width:$mobile){
+			padding-left: toRem(24);
+			padding-right: 24px; 
+	  }
 		@if ($maxWidthContainer>0) {
 			max-width: toRem($containerWidth);
 			margin: 0 auto;
@@ -131,6 +135,7 @@ body {
 } @else {
 	// По брейк-поинтам
 	[class*="__container"] {
+		
 		margin: 0 auto;
 		@if ($maxWidthContainer>0) {
 			max-width: toRem($containerWidth);
