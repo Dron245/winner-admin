@@ -9,26 +9,99 @@ textarea {
 	appearance: none;
 }
 .input {
-	border-radius: 0 !important;
+	border-radius: 15px !important;
+	color: $mainColor;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
+	padding: 20px;
+	font-weight: 500;
+	border: 1px solid $obvodka;
+	background-color: $fon;
+	@media (any-hover: hover){
+		&:hover{
+			background-color: $seryy;
+		}
+		&:active {
+
+		}
+	}
+	@media (max-width:$mobile){
+		 padding: toRem(15) toRem(16) toRem(16) toRem(16); 
+	}
 	&._form-focus {
 	}
 	&._form-error {
-	}
-}
-.input[placeholder]:not([data-placeholder-nohiden]) {
-	&::placeholder {
-		transition: opacity 0.3s;
-	}
-	&:focus::placeholder {
-		opacity: 0;
+		
+		border: 1px solid #906969;
+	
 	}
 }
 
+// input:focus ~ .article__placeholder,
+// input:not(:focus):valid ~ .article__placeholder{
+//   top: 8px;
+//   bottom: 10px;
+//   left: 20px;
+//   font-size: 11px;
+//   opacity: 1;
+// }
+
+// .inputText {
+//   font-size: 14px;
+//   width: 200px;
+//   height: 35px;
+// }
+
+.article__placeholder {
+   position: absolute;
+  pointer-events: none;
+  color:rgba(28, 28, 34, 0.50);
+
+  left: 20px;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  overflow: hidden;
+//   line-height: 40px;
+  transition: .3s;
+}
+.input:focus, .input:not(:focus):valid {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	@media (max-width:$mobile){
+		 padding-top: 22px;
+		 padding-bottom: 9px; 
+	}
+}
+.input:focus~.article__placeholder, .input:not(:focus):valid~.article__placeholder {
+  top: 10px;
+  transform: none;
+  font-size: 12px;
+}
+
+// .input[placeholder]:not([data-placeholder-nohiden]) {
+// 	&::placeholder {
+// 		transition: opacity 0.3s;
+// 	}
+// 	&:focus::placeholder {
+// 		opacity: 0;
+// 	}
+// }
+
 textarea.input {
 	resize: none;
-	padding: 0px 0px;
+	&:hover{
+		background-color: $fon;
+	}
+	&:focus,:not(:focus):valid {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	&.input:focus~.article__placeholder,
+	 .input:not(:focus):valid~.article__placeholder {
+		// top: 0;
+		// padding: 0;
+	}
+	padding: 20px 20px;
 }
