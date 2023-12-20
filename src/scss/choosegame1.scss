@@ -31,8 +31,11 @@
 		}
 	}
 
+	&__row {
+		// &:not(:last-child) {margin-bottom: toRem(2);}
+	}
 	&__wrapper {
-		column-span: all;
+		// column-span: all;
 		
 		// flex: 0 0 100%;
 		// display: block;
@@ -54,32 +57,73 @@
 .choosegame {
 
 	&__item {
-		
+
+		&_w100{
+			column-span: all;
+			margin-bottom: toRem(2);
+		}
 
 	}
 }
 .article {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
+	// display: flex;
+	// align-items: center;
+	// flex-wrap: wrap;
 	margin-bottom: 2px;
-	column-gap: toRem(16);
-	row-gap: toRem(48);
+	// column-gap: toRem(16);
+	// row-gap: toRem(48);
+	
 	break-inside: avoid;
 	@media (max-width:$mobile){
-		 column-gap: toRem(8);
-		 row-gap: toRem(16);
+		//  column-gap: toRem(8);
+		//  row-gap: toRem(16);
 	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {margin-bottom: toRem(48);}
+		@media (max-width:$mobile){
+			 &:not(:last-child) {margin-bottom: toRem(16);} 
+		}
+		&_help {
+			@media (max-width:$mobile){
+				 display: none; 
+			}
+		}
+	}
+
+	&__left {
+		display: flex;
+		align-items: center;
+		column-gap: toRem(16);
+		@media (max-width:$mobile){
+			 column-gap: toRem(8); 
+		}
+	}
+
 	&__img {
-		
+		// margin-right: toRem(16);
+		@media (max-width:$mobile){
+			//  margin-right: toRem(8); 
+		}
 	}
 
 	&__title {
+		flex: 1 0 100%;
 		font-size: toRem(24);
 		font-weight: 500;
 		@media (max-width:$mobile){
 			 font-size: toRem(18); 
 		}
+	}
+
+	&__textarea {
+		height: 150px;
+			@media (max-width:$mobile){
+				 height: 120px; 
+			}
 	}
 	&__form {
 		margin-left: auto;
@@ -98,7 +142,9 @@
 		&_textarea {
 			flex: 1 0 100%;
 			position: relative;
+			
 		}
+		
 	}
 
 	
@@ -123,34 +169,66 @@
 
 	&__help {
 		flex: 1 0 100%;
+		@media (max-width:$mobile){
+			 display: none; 
+		}
+		& .article__row {
+			margin-bottom: toRem(20);
+			@media (max-width:$mobile){
+				display: none;
+			}
+		}
 	}
 
 	&__form {
 
 		&_textarea {
+			position: relative;
+			
 		}
 	}
 
 	&__textarea {
+
 	}
 
 	&__textarea-button {
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		display: inline-flex;
+		padding: 10px 20px;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		border-radius: 10px;
+		border: 1px solid $obvodka;
+		background: var(---, #FFF);
+		font-weight: 500;
+		color: $obvodka;
 	}
 }
 .icon {
 }
 .help-article {
-
+	
 	&__subtext {
+		color: $chernyy;
+		
 	}
 
 	&__right {
+		display: flex;
+		align-items: center;
+		column-gap: toRem(12);
 	}
 
 	&__img {
 	}
 
 	&__text {
+		max-width: 5.6875rem;
+		font-weight: 500;
 	}
 }
 .input {

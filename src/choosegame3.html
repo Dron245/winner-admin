@@ -9,56 +9,66 @@
 			<main class="page">
 				<section class="page__choosegame choosegame">
 					<div class="choosegame__container">
-						<div class="choosegame__wrapper pol cell">
-							<form class="form-select" action="#" method="POST">
-								<div class="form-select__item-first">
-									<span>Сравнение</span>
-									<div class="form-select__arrow">
-										<img src="@img/generalimg/arrow-sel.svg" alt="">
+						<!-- <div class="choosegame__row"> -->
+							<div class="choosegame__item choosegame__item_w100 cell">
+								<form class="form-select" action="#" method="POST">
+									<div class="form-select__item-first">
+										<span>Сравнение</span>
+										<div class="form-select__arrow">
+											<img src="@img/generalimg/arrow-sel.svg" alt="">
+										</div>
 									</div>
-								</div>
-								<div  class="form-select__drop-menu options">
-									<div class="options__item">
-										<input autocomplete="off" type="radio" id="o_1" value="1" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-										<label for="o_1" class="options__label">Примеры</label>
-									</div>
-									<div class="options__item">
-										<input autocomplete="off" type="radio" id="o_2" value="2" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-										<label for="o_2" class="options__label">Найти число</label>
-									</div>
-									<div class="options__item">
-										<input autocomplete="off" type="radio" id="o_3" value="3" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-										<label for="o_3" class="options__label">Найди большее число</label>
-									</div>
-									<div class="options__item">
-										<input autocomplete="off" type="radio" id="o_4" value="4" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-										<label for="o_4" class="options__label">Найди меньшее число</label>
-									</div>
-									<div class="options__item options__item_button">
-										<button type="button" class="options__button button-options">
-											<div class="button-options__img">
-												<img src="@img/generalimg/add.svg" alt="">
-											</div>
-											<span class="button__title">Создать новую игру</span>
-										</button>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="choosegame__row">
-							<article class="choosegame__item article cell">
-								<div class="article__img icon"><img src="@img/choosegame/check.svg" alt=""></div>
-								<span class="article__title">Активность</span>
-								<form class="article__form" action="#" method="POST">
-									<div class="checkbox article__checkbox-wrapper">
-										<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-										<label for="c_1" class="checkbox__label"><span class="checkbox__text">Текст</span></label>
+									<div  class="form-select__drop-menu options">
+										<div class="options__item">
+											<input autocomplete="off" type="radio" id="o_1" value="1" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
+											<label for="o_1" class="options__label">Примеры</label>
+										</div>
+										<div class="options__item">
+											<input autocomplete="off" type="radio" id="o_2" value="2" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
+											<label for="o_2" class="options__label">Найти число</label>
+										</div>
+										<div class="options__item">
+											<input autocomplete="off" type="radio" id="o_3" value="3" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
+											<label for="o_3" class="options__label">Найди большее число</label>
+										</div>
+										<div class="options__item">
+											<input autocomplete="off" type="radio" id="o_4" value="4" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
+											<label for="o_4" class="options__label">Найди меньшее число</label>
+										</div>
+										<div class="options__item options__item_button">
+											<button type="button" class="options__button button-options">
+												<div class="button-options__img">
+													<img src="@img/generalimg/add.svg" alt="">
+												</div>
+												<span class="button__title">Создать новую игру</span>
+											</button>
+										</div>
 									</div>
 								</form>
+							</div>
+						<!-- </div> -->
+						<div class="choosegame__row">
+							<article class="choosegame__item article cell">
+								<div class="article__row">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/check.svg" alt=""></div>
+										<span class="article__title">Активность</span>
+									</div>
+									<form class="article__form" action="#" method="POST">
+										<div class="checkbox article__checkbox-wrapper">
+											<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_1" class="checkbox__label"><span class="checkbox__text">Текст</span></label>
+										</div>
+									</form>
+								</div>
 							</article>
 							<article class="choosegame__item article cell">
-								<div class="article__img icon"><img src="@img/choosegame/nazv.svg" alt=""></div>
-								<span class="article__title">Название</span>
+								<div class="article__row">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/nazv.svg" alt=""></div>
+										<span class="article__title">название</span>
+									</div>
+								</div>
 								<form class="article__form article__form_input-text" action="#" method="POST">
 									<div class="article__input-wrapper">
 										<input  type="text" class="input" required>
@@ -67,19 +77,25 @@
 								</form>
 							</article>
 							<article class="choosegame__item article cell">
-								<div class="article__img icon"><img src="@img/choosegame/text.svg" alt=""></div>
-								<span class="article__title">Описание</span>
-								<div class="article__help help-article">
-									<p class="help-article__subtext">Описание игры,<br>В две строки если-что</p>
-									<div class="help-article__right">
-										<div class="help-article__img">
-											<img src="@img/choosegame/arrow-Vector.svg" alt="">
-										</div>
-										<p class="help-article__text">Напишите его снизу</p>
+								<div class="article__row">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/text.svg" alt=""></div>
+										<span class="article__title">Описание</span>
 									</div>
 								</div>
-								<form class="article__form article__form_textarea" action="#" method="POST">
-									<textarea required class="article__textarea input" id="" cols="30" rows="10" placeholder="Введите описание"></textarea>
+								<div class="article__help help-article">
+									<div class="article__row">
+										<p class="help-article__subtext">Описание игры,<br>В две строки если-что</p>
+										<div class="help-article__right">
+											<div class="help-article__img">
+												<img src="@img/choosegame/arrow-Vector.svg" alt="">
+											</div>
+											<p class="help-article__text">Напишите его снизу</p>
+										</div>
+									</div>
+								</div>
+								<form class="article__form_textarea" action="#" method="POST">
+									<textarea required class="article__textarea input" id=""  placeholder="Введите описание"></textarea>
 									<button type="submit" class="article__textarea-button button">Сохранить</button>
 								</form>
 							</article>

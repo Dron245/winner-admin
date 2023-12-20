@@ -66,7 +66,7 @@ textarea {
 //   line-height: 40px;
   transition: .3s;
 }
-.input:focus, .input:not(:focus):valid {
+input.input:focus, input.input:not(:focus):valid {
 	padding-top: 30px;
 	padding-bottom: 10px;
 	@media (max-width:$mobile){
@@ -74,7 +74,7 @@ textarea {
 		 padding-bottom: 9px; 
 	}
 }
-.input:focus~.article__placeholder, .input:not(:focus):valid~.article__placeholder {
+input.input:focus~.article__placeholder, input.input:not(:focus):valid~.article__placeholder {
   top: 10px;
   transform: none;
   font-size: 12px;
