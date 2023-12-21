@@ -63,17 +63,17 @@ textarea {
 
 .article__placeholder {
    position: absolute;
-  pointer-events: none;
-  color:rgba(28, 28, 34, 0.50);
-
-  left: 20px;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  white-space: nowrap;
-  overflow: hidden;
-//   line-height: 40px;
-  transition: .3s;
+	pointer-events: none;
+	color:rgba(28, 28, 34, 0.50);
+	left: 20px;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	white-space: nowrap;
+	overflow: hidden;
+	//   line-height: 40px;
+	transition: .3s;
+	
 }
 input.input:focus, input.input:not(:focus):valid {
 	padding-top: 30px;
@@ -87,6 +87,11 @@ input.input:focus~.article__placeholder, input.input:not(:focus):valid~.article_
   top: 10px;
   transform: none;
   font-size: 12px;
+  .article__form_input-load & {
+	top: 50%;
+   transform: translateY(-50%);
+	font-size: toRem(14);
+  }
 }
 
 // .input[placeholder]:not([data-placeholder-nohiden]) {

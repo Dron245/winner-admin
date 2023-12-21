@@ -175,58 +175,145 @@
 								</form>
 							</article>
 						</div>
-						<div class="choosegame__row">
-							<article class="choosegame__item article cell">
-								<div class="article__row">
-									<div class="article__left">
-										<div class="article__img icon"><img src="@img/choosegame/zvuk.svg" alt=""></div>
-										<span class="article__title">2Звук правильного ответа</span>
-									</div>
-									<!-- <div class="article__actions actions">
-										
-										
-									</div> -->
-								</div>
-								<form class="article__form article__form_input-load" action="#" method="POST">
-									<!-- <div class="article__input-wrapper"> -->
-										<label class="options__label input-file">
-											<span class="actions__icon actions__icon_load icon input-file-btn">
-												<img src="@img/generalimg/load.svg" alt="Загрузить">
-											</span>
-											<span class="actions__icon actions__icon_del icon">
-												<img src="@img/generalimg/cart.svg" alt="Удалить">
-											</span>
-											<span class="input-file-text" type="text"></span>
-											<input type="file" name="file" class="input options__input" placeholder="dfsdf" required>
-										</label>
-									<!-- </div> -->
-								</form>
-							</article>
-							<article class="choosegame__item article cell">
+						<div class="choosegame__row choosegame__row_two">
+							<article class="choosegame__item choosegame__item_file-load article cell">
 								<div class="article__row">
 									<div class="article__left">
 										<div class="article__img icon"><img src="@img/choosegame/zvuk.svg" alt=""></div>
 										<span class="article__title">Звук правильного ответа</span>
 									</div>
-									<!-- <div class="article__actions actions">
-										
-										
-									</div> -->
+									<div data-da=".article__form_input-load, 768" class="article__actions actions">
+										<button type="button" class="actions__icon actions__icon_del icon">
+											<img class="del__close" src="@img/generalimg/cart.svg" alt="Удалить">
+											<img class="del__open" src="@img/generalimg/cart-open.svg" alt="Удалить">
+										</button>
+										<button type="button" class="actions__icon actions__icon_load icon input-file-btn">
+											<img src="@img/generalimg/load.svg" alt="Загрузить">
+										</button>
+									</div>
 								</div>
 								<form class="article__form article__form_input-load" action="#" method="POST">
-									<!-- <div class="article__input-wrapper"> -->
-										<label class="options__label input-file">
-											<span class="actions__icon actions__icon_load icon input-file-btn">
-												<img src="@img/generalimg/load.svg" alt="Загрузить">
-											</span>
-											<span class="actions__icon actions__icon_del icon">
-												<img src="@img/generalimg/cart.svg" alt="Удалить">
-											</span>
-											<span class="input-file-text" type="text"></span>
-											<input type="file" name="file" class="input options__input" placeholder="dfsdf" required>
-										</label>
-									<!-- </div> -->
+									<label class="options__label input-file">
+										<span class="input-file-text" type="text"></span>
+										<input type="file" name="file" class="input options__input" placeholder="" required>
+										<label class="article__placeholder">Файл пока что не загружен</label>
+									</label>
 								</form>
+							</article>
+							<article class="choosegame__item choosegame__item_file-load article cell">
+								<div class="article__row">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/zvuk.svg" alt=""></div>
+										<span class="article__title">Звук неправильного ответа</span>
+									</div>
+									<div data-da=".article__form_input-load, 768" class="article__actions actions">
+										<button type="button" class="actions__icon actions__icon_del icon">
+											<img class="del__close" src="@img/generalimg/cart.svg" alt="Удалить">
+											<img class="del__open" src="@img/generalimg/cart-open.svg" alt="Удалить">
+										</button>
+										<button type="button" class="actions__icon actions__icon_load icon input-file-btn">
+											<img src="@img/generalimg/load.svg" alt="Загрузить">
+										</button>
+									</div>
+								</div>
+								<form class="article__form article__form_input-load" action="#" method="POST">
+									<label class="options__label input-file">
+										<span class="input-file-text" type="text"></span>
+										<input type="file" name="file" class="input options__input" placeholder="" required>
+										<label class="article__placeholder">Файл пока что не загружен</label>
+									</label>
+								</form>
+							</article>
+							<article class="choosegame__item article cell">
+								<div class="article__row article__row_bigmb">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/time.svg" alt=""></div>
+										<span class="article__title">Время начала турнира</span>
+									</div>
+								</div>
+								<form class="article__form article__form_input-text" action="#" method="POST">
+									<div class="article__input-wrapper">
+										<input type="text" class="input input_andbuttons" required>
+										<label class="article__placeholder">Введите время (XX:XX)</label>
+									</div>
+									<div class="article__buttons">
+										<button type="button" class="article__button article__button_minus">
+											<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+											<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+										</button>
+										<button type="button" class="article__button article__button_plus">
+											<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+											<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+										</button>
+									</div>
+								</form>
+							</article>
+							<article class="choosegame__item article cell">
+								<div class="article__row article__row_bigmb">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/time.svg" alt=""></div>
+										<span class="article__title">Время окончания турнира</span>
+									</div>
+								</div>
+								<form class="article__form article__form_input-text" action="#" method="POST">
+									<div class="article__input-wrapper">
+										<input type="text" class="input input_andbuttons" required>
+										<label class="article__placeholder">Введите время (XX:XX)</label>
+									</div>
+									<div class="article__buttons">
+										<button type="button" class="article__button article__button_minus">
+											<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+											<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+										</button>
+										<button type="button" class="article__button article__button_plus">
+											<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+											<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+										</button>
+									</div>
+								</form>
+							</article>
+						</div>
+						<div class="choosegame__row choosegame__row_three">
+							<article style="height: 281px;" class="choosegame__item choosegame__item_file-load article cell">1
+							</article>
+							<article style="height: 877px;" class="choosegame__item choosegame__item_file-load article cell">2
+							</article>
+							<article style="height: 1252px;" class="choosegame__item choosegame__item_file-load article cell">3
+							</article>
+							<article style="height: 684px;" class="choosegame__item choosegame__item_file-load article cell">4
+							</article>
+							<article style="height: 202px;" class="choosegame__item choosegame__item_file-load article cell">
+								<div class="article__row">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/crime.svg" alt=""></div>
+										<div class="title-block">
+											<span class="article__title">Мошенник если </span><br>
+											<span class="help-article__subtext">Время прохождения игры &#60;=</span>
+										</div>
+									</div>
+								</div>
+								<form class="article__form article__form_input-text" action="#" method="POST">
+									<div class="article__input-wrapper">
+										<input type="text" class="input input_andbuttons" required>
+										<label class="article__placeholder">Введите время (сек)</label>
+									</div>
+									<div class="article__buttons">
+										<button type="button" class="article__button article__button_minus">
+											<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+											<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+										</button>
+										<button type="button" class="article__button article__button_plus">
+											<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+											<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+										</button>
+									</div>
+								</form>
+							</article>
+							<article style="height: 416px;" class="choosegame__item choosegame__item_file-load article cell">6
+							</article>
+							<article style="height: 637px;" class="choosegame__item choosegame__item_file-load article cell">7
+							</article>
+							<article style="height: 340px;" class="choosegame__item choosegame__item_file-load article cell">8
 							</article>
 						</div>
 					</div>

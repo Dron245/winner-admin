@@ -42,6 +42,49 @@
 	&__row {
 		column-count: 2;
 		column-gap: toRem(2);
+		@media (max-width:$mobile){
+			display: flex;
+			flex-direction: column; 
+		}
+		&_two {
+			@media (min-width:$mobile){
+				column-count: initial;
+				 display: grid;
+				 grid-template-columns: 1fr 1fr;
+				}
+		}
+
+		&_three {
+			@media (max-width:$mobile){
+				 display: grid;
+				 grid-template-columns: 1fr;
+				 & :nth-child(4){
+					grid-row-start: 2;
+				 }
+				//  & :nth-child(2){
+				// 	grid-row-start: 3;
+				//  }
+				//  & :nth-child(5){
+				// 	grid-row-start: 4;
+				//  }
+				//  & :nth-child(6){
+				// 	grid-row-start: 5;
+				//  }
+				 & :nth-child(3){
+					grid-row-start: 8;
+				 }
+			}
+		}
+	}
+
+	&__item {
+		&_file-load {
+			& div.article__row {
+				@media (min-width:$mobile){
+					 margin-bottom: toRem(40); 
+				}
+			}
+		}
 	}
 }
 
@@ -63,9 +106,9 @@
 		&_bigmb:not(:last-child) {
 			@media (min-width:$mobile){
 				  margin-bottom: toRem(62);
-			}
-			
+				}
 		}
+		
 	}
 
 	&__left {
@@ -87,8 +130,9 @@
 		flex: 1 0 100%;
 		font-size: toRem(24);
 		font-weight: 500;
+		@include adaptiveValue("font-size", 24, 18);
 		@media (max-width:$mobile){
-			 font-size: toRem(18); 
+			//  font-size: toRem(18); 
 		}
 	}
 
@@ -133,8 +177,12 @@
 
 	&__form {
 		margin-left: auto;
-		&__input-load {
-			
+		&_input-load {
+			@media (max-width:$mobile){
+				 display: flex;
+				 align-items: center;
+				 justify-content: space-between; 
+			}
 		}
 
 		&_input-text{
@@ -231,24 +279,49 @@
 .actions {
 
 	&__icon {
-		position: absolute;
-		top: 20px;
-		right: 20px;
+		width: 48px;
+		height: 48px;
+		transition: background-color 0.3s;
+		// position: absolute;
+		// top: 20px;
+		// right: 20px;
 		&_del {
-			display: none;
+			
+			background-color: var(--10, rgba(144, 105, 105, 0.10));
+			&:hover{
+				background-color: rgba(173, 67, 67, 0.1)
+			}
+			&:active {
+				
+				& .del__close{display: none;}
+				& .del__open{display: block;}
+			}
+			// display: none;
 			&._view{
-				display: flex;
+				// display: flex;
 			}
 		}
 
 		&_load {
+			background: rgba(114, 76, 138, 0.10);
+			&:hover{
+				background: rgba(126, 90, 148, 0.14);
+			}
+			&:active {
+				background: rgba(85, 66, 97, 0.12);
+			}
 			&._hidden {
-				display: none;
+				// display: none;
 			}
 		}
 	}
 }
 
+.del {
+	&__open {
+		display: none;
+	}
+}
 
 .help-article {
 	

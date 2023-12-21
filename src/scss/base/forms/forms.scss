@@ -259,19 +259,26 @@ input:checked + .checkbox__label:after {
 
 
 .input-file {
+	
+	@media (max-width:$mobile){
+		 width: 78.571429%; /* 220/280 */
+	}
 	.article__form_input-load & {
-		position: static;
+		// position: static;
 	}
 	// position: relative;
-	display: inline-block;
-	outline: 1px solid $obvodka;
+	// display: inline-block;
+	// outline: 1px solid $obvodka;
 	border-radius: 15px;
 	line-height: 20px;
 	height: 60px;
-	color: $mainColor;
-	width: 100%;
-	display: block;
-	padding: 20px;
+	@media (max-width:$mobile){
+		 height: 48px; 
+	}
+	// color: $mainColor;
+	// width: 100%;
+	// display: block;
+	// padding: 20px;
 	font-weight: 500;
 	outline: 1px solid $obvodka;
 	background-color: $fon;
@@ -288,49 +295,49 @@ input:checked + .checkbox__label:after {
 	// border-radius: 6px 0px 0 6px;
 	// border: 1px solid #ddd;
 }
-.input-file-btn {
-position: relative;
-	display: inline-block;
-	cursor: pointer;
-	outline: none;
-	text-decoration: none;
-	font-size: 14px;
-	vertical-align: middle;
-	color: rgb(255 255 255);
-	text-align: center;
-	border-radius: 0 4px 4px 0;
-	background-color: #419152;
-	line-height: 22px;
-	height: 40px;
-	padding: 10px 20px;
-	box-sizing: border-box;
-	border: none;
-	margin: 0;
-	transition: background-color 0.2s;
-}
-.input-file input[type=file] {
-	position: absolute;
-	z-index: -1;
-	opacity: 0;
-	display: block;
-	width: 0;
-	height: 0;
-}
+// .input-file-btn {
+// position: relative;
+// 	display: inline-block;
+// 	cursor: pointer;
+// 	outline: none;
+// 	text-decoration: none;
+// 	font-size: 14px;
+// 	vertical-align: middle;
+// 	color: rgb(255 255 255);
+// 	text-align: center;
+// 	border-radius: 0 4px 4px 0;
+// 	background-color: #419152;
+// 	line-height: 22px;
+// 	height: 40px;
+// 	padding: 10px 20px;
+// 	box-sizing: border-box;
+// 	border: none;
+// 	margin: 0;
+// 	transition: background-color 0.2s;
+// }
+// .input-file input[type=file] {
+// 	position: absolute;
+// 	z-index: -1;
+// 	opacity: 0;
+// 	display: block;
+// 	width: 0;
+// 	height: 0;
+// }
 
-/* Focus */
-.input-file input[type=file]:focus + .input-file-btn {
-	// box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-}
+// /* Focus */
+// .input-file input[type=file]:focus + .input-file-btn {
+// 	// box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+// }
 
 /* Hover/Active */
-.input-file:hover .input-file-btn {
+.input-file:hover {
 	background-color: rgba(104, 105, 105, 0.1);
 }
-.input-file:active .input-file-btn {
+.input-file:active {
 	background-color: rgba(104, 105, 105, 0.1);
 }
 
 /* Disabled */
-.input-file input[type=file]:disabled + .input-file-btn {
+.input-file input[type=file]:disabled {
 	background-color: #eee;
 }
