@@ -9,44 +9,42 @@
 			<main class="page">
 				<section class="page__choosegame choosegame">
 					<div class="choosegame__container">
-						<!-- <div class="choosegame__row"> -->
-							<div class="choosegame__item choosegame__item_w100 cell">
-								<form class="form-select" action="#" method="POST">
-									<div class="form-select__item-first">
-										<span>Сравнение</span>
-										<div class="form-select__arrow">
-											<img src="@img/generalimg/arrow-sel.svg" alt="">
-										</div>
+						<div class="choosegame__top cell">
+							<form class="form-select" action="#" method="POST">
+								<div class="form-select__item-first">
+									<span>Сравнение</span>
+									<div class="form-select__arrow">
+										<img src="@img/generalimg/arrow-sel.svg" alt="">
 									</div>
-									<div  class="form-select__drop-menu options">
-										<div class="options__item">
-											<input autocomplete="off" type="radio" id="o_1" value="1" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-											<label for="o_1" class="options__label">Примеры</label>
-										</div>
-										<div class="options__item">
-											<input autocomplete="off" type="radio" id="o_2" value="2" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-											<label for="o_2" class="options__label">Найти число</label>
-										</div>
-										<div class="options__item">
-											<input autocomplete="off" type="radio" id="o_3" value="3" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-											<label for="o_3" class="options__label">Найди большее число</label>
-										</div>
-										<div class="options__item">
-											<input autocomplete="off" type="radio" id="o_4" value="4" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-											<label for="o_4" class="options__label">Найди меньшее число</label>
-										</div>
-										<div class="options__item options__item_button">
-											<button type="button" class="options__button button-options">
-												<div class="button-options__img">
-													<img src="@img/generalimg/add.svg" alt="">
-												</div>
-												<span class="button__title">Создать новую игру</span>
-											</button>
-										</div>
+								</div>
+								<div  class="form-select__drop-menu options">
+									<div class="options__item">
+										<input autocomplete="off" type="radio" id="o_1" value="1" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
+										<label for="o_1" class="options__label">Примеры</label>
 									</div>
-								</form>
-							</div>
-						<!-- </div> -->
+									<div class="options__item">
+										<input autocomplete="off" type="radio" id="o_2" value="2" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
+										<label for="o_2" class="options__label">Найти число</label>
+									</div>
+									<div class="options__item">
+										<input autocomplete="off" type="radio" id="o_3" value="3" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
+										<label for="o_3" class="options__label">Найди большее число</label>
+									</div>
+									<div class="options__item">
+										<input autocomplete="off" type="radio" id="o_4" value="4" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
+										<label for="o_4" class="options__label">Найди меньшее число</label>
+									</div>
+									<div class="options__item options__item_button">
+										<button type="button" class="options__button button-options">
+											<div class="button-options__img">
+												<img src="@img/generalimg/add.svg" alt="">
+											</div>
+											<span class="button__title">Создать новую игру</span>
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
 						<div class="choosegame__row">
 							<article class="choosegame__item article cell">
 								<div class="article__row">
@@ -96,19 +94,141 @@
 								</div>
 								<form class="article__form_textarea" action="#" method="POST">
 									<textarea required class="article__textarea input" id=""  placeholder="Введите описание"></textarea>
-									<button type="submit" class="article__textarea-button button">Сохранить</button>
+									<button type="button" class="article__textarea-button button">Сохранить</button>
+									<button type="button" class="article__textarea-button article__textarea-button_save button">Успешно сохранено</button>
+									<button type="button" class="article__textarea-button article__textarea-button_error button">Произошла ошибка, попробуйте позже</button>
+								</form>
+							</article>
+							<article class="choosegame__item article cell">
+								<div class="article__row article__row_bigmb">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/task.svg" alt=""></div>
+										<span class="article__title">Сортировка</span>
+									</div>
+								</div>
+								<form class="article__form article__form_input-text" action="#" method="POST">
+									<div class="article__input-wrapper">
+										<input type="text" class="input input_andbuttons" required>
+										<label class="article__placeholder">Введите количество</label>
+									</div>
+									<div class="article__buttons">
+										<button type="button" class="article__button article__button_minus">
+											<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+											<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+										</button>
+										<button type="button" class="article__button article__button_plus">
+											<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+											<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+										</button>
+									</div>
+								</form>
+							</article>
+							<article class="choosegame__item article cell">
+								<div class="article__row">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/bot.svg" alt=""></div>
+										<div class="title-block">
+											<span class="article__title">Ботов</span><br>
+											<span class="help-article__subtext">В минуту</span>
+										</div>
+									</div>
+								</div>
+								<form class="article__form article__form_input-text" action="#" method="POST">
+									<div class="article__input-wrapper">
+										<input type="text" class="input input_andbuttons" required>
+										<label class="article__placeholder">Введите количество</label>
+									</div>
+									<div class="article__buttons">
+										<button type="button" class="article__button article__button_minus">
+											<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+											<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+										</button>
+										<button type="button" class="article__button article__button_plus">
+											<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+											<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+										</button>
+									</div>
+								</form>
+							</article>
+							<article class="choosegame__item article cell">
+								<div class="article__row article__row_bigmb">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/priz.svg" alt=""></div>
+										<span class="article__title">Призовой фонд</span>
+									</div>
+								</div>
+								<form class="article__form article__form_input-text" action="#" method="POST">
+									<div class="article__input-wrapper">
+										<input type="text" class="input input_andbuttons" required>
+										<label class="article__placeholder">Введите количество</label>
+									</div>
+									<div class="article__buttons">
+										<button type="button" class="article__button article__button_minus">
+											<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+											<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+										</button>
+										<button type="button" class="article__button article__button_plus">
+											<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+											<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+										</button>
+									</div>
 								</form>
 							</article>
 						</div>
-						<div class=" pol cell"></div>
-						<div class=" pol cell">2Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, voluptas.</div>
-						<div class=" pol cell">3Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam molestiae, delectus cumque ratione rem recusandae iusto quas. Eveniet, totam dolor corrupti doloremque provident sunt similique nihil alias vel quisquam delectus.</div>
-						<div class=" pol cell">4Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore atque iure quam facilis quisquam. Voluptates dolorem maxime error quam doloremque quasi necessitatibus rerum assumenda repudiandae temporibus. Tempora ex, est eveniet totam architecto veritatis ea! Perferendis earum veritatis molestias fugiat debitis architecto dolor, ducimus minima similique molestiae incidunt odit id.</div>
-						<div class=" pol cell">5</div>
-						<div class=" pol cell">6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam soluta ex magni, optio commodi animi aspernatur doloribus. Laboriosam, enim eum. Consequuntur architecto ut fuga est cum minus ducimus impedit illo.
-						Repellat a sapiente reprehenderit, in dolores, tempore nisi explicabo hic quo laborum corrupti voluptates consequatur consectetur ad ipsa molestias incidunt ut deleniti et? Laboriosam a accusamus commodi accusantium nihil alias?
-						Cupiditate ipsam fuga at reiciendis, temporibus laboriosam incidunt quos maiores architecto! A fuga repudiandae, reprehenderit sequi pariatur porro nulla illum molestiae ducimus corrupti accusamus ab hic incidunt blanditiis doloremque fugiat?
-						Delectus fugit corporis totam nemo ullam porro, libero ab nihil illum dicta illo veritatis sapiente? Iste earum, velit cum fugiat voluptatibus dignissimos incidunt molestiae? Facere velit error voluptas reprehenderit tenetur?</div>
+						<div class="choosegame__row">
+							<article class="choosegame__item article cell">
+								<div class="article__row">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/zvuk.svg" alt=""></div>
+										<span class="article__title">2Звук правильного ответа</span>
+									</div>
+									<!-- <div class="article__actions actions">
+										
+										
+									</div> -->
+								</div>
+								<form class="article__form article__form_input-load" action="#" method="POST">
+									<!-- <div class="article__input-wrapper"> -->
+										<label class="options__label input-file">
+											<span class="actions__icon actions__icon_load icon input-file-btn">
+												<img src="@img/generalimg/load.svg" alt="Загрузить">
+											</span>
+											<span class="actions__icon actions__icon_del icon">
+												<img src="@img/generalimg/cart.svg" alt="Удалить">
+											</span>
+											<span class="input-file-text" type="text"></span>
+											<input type="file" name="file" class="input options__input" placeholder="dfsdf" required>
+										</label>
+									<!-- </div> -->
+								</form>
+							</article>
+							<article class="choosegame__item article cell">
+								<div class="article__row">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/zvuk.svg" alt=""></div>
+										<span class="article__title">Звук правильного ответа</span>
+									</div>
+									<!-- <div class="article__actions actions">
+										
+										
+									</div> -->
+								</div>
+								<form class="article__form article__form_input-load" action="#" method="POST">
+									<!-- <div class="article__input-wrapper"> -->
+										<label class="options__label input-file">
+											<span class="actions__icon actions__icon_load icon input-file-btn">
+												<img src="@img/generalimg/load.svg" alt="Загрузить">
+											</span>
+											<span class="actions__icon actions__icon_del icon">
+												<img src="@img/generalimg/cart.svg" alt="Удалить">
+											</span>
+											<span class="input-file-text" type="text"></span>
+											<input type="file" name="file" class="input options__input" placeholder="dfsdf" required>
+										</label>
+									<!-- </div> -->
+								</form>
+							</article>
+						</div>
 					</div>
 				</section>
 			</main>

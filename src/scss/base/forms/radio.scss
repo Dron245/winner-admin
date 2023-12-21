@@ -49,6 +49,9 @@
 			flex: 0 0 20px;
 			border-radius: 50%;
 			background-color: $obvodka;
+			.article__form_input-load & {
+				display: none;
+			}
 			// border: 1px solid #a7a9ac;
 		}
 		&:after {
@@ -62,6 +65,9 @@
 			position: absolute;
 			left: 22px;
 			top: 31px;
+			.article__form_input-load & {
+				display: none;
+			}
 			@media (max-width:$mobile){
 				  top: 23px;
 				  left: 22px;

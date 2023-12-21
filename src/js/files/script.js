@@ -14,3 +14,10 @@ function documentActions(e) {
 		document.documentElement.classList.remove('select-open');
 	}
 }
+
+$('.input-file input[type=file]').on('change', function(){
+	let file = this.files[0];
+	$('.actions__icon_del').addClass('_view');
+	$('.actions__icon_load').addClass('_hidden');
+	$(this).closest('.input-file').find('.input-file-text').html(file.name);
+});

@@ -9,14 +9,19 @@ textarea {
 	appearance: none;
 }
 .input {
-	border-radius: 15px !important;
+	border-radius: 15px;
+	line-height: 20px;
+	height: 60px;
 	color: $mainColor;
 	width: 100%;
 	display: block;
 	padding: 20px;
 	font-weight: 500;
-	border: 1px solid $obvodka;
+	outline: 1px solid $obvodka;
 	background-color: $fon;
+	@media (max-width:$mobile){
+		 height: 48px; 
+	}
 	@media (any-hover: hover){
 		&:hover{
 			background-color: $seryy;
@@ -34,6 +39,10 @@ textarea {
 		
 		border: 1px solid #906969;
 	
+	}
+	&.input_andbuttons {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
 	}
 }
 
