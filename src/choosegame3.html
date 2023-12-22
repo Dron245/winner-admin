@@ -274,15 +274,617 @@
 							</article>
 						</div>
 						<div class="choosegame__row choosegame__row_three">
-							<article style="height: 281px;" class="choosegame__item choosegame__item_file-load article cell">1
+							<article class="choosegame__item choosegame__item_checks article cell">
+								<div class="article__row">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/star.svg" alt=""></div>
+										<span class="article__title">Подписка</span>
+									</div>
+								</div>
+								<div class="article__block">
+									<div class="article__row article__row_check">
+										<div class="article__left">
+											<span class="article__subtitle">Активность</span>
+										</div>
+										<form class="article__form" action="#" method="POST">
+											<div class="checkbox article__checkbox-wrapper">
+												<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_2" class="checkbox__label"><span class="checkbox__text">Текст</span></label>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="article__block">
+									<div class="article__row article__row_check">
+										<div class="article__left">
+											<span class="article__subtitle">Подписка связана с покупкой игр</span>
+										</div>
+										<form class="article__form" action="#" method="POST">
+											<div class="checkbox article__checkbox-wrapper">
+												<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_3" class="checkbox__label"><span class="checkbox__text">Текст</span></label>
+											</div>
+										</form>
+									</div>
+								</div>
 							</article>
-							<article style="height: 877px;" class="choosegame__item choosegame__item_file-load article cell">2
+							<article class="choosegame__item choosegame__item_spollers article cell">
+								<div class="article__row">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/parametrs.svg" alt=""></div>
+										<span class="article__title">Параметры игры</span>
+									</div>
+								</div>
+								<div data-spollers class="article__spollers spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title article__subtitle">
+											<span>Количество объектов</span>
+											<img src="@img/generalimg/arrow-sel.svg" alt="">
+										</summary>
+										<div class="spollers__body options">
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для первого уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для второго уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для третьего уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для четвёртого уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<button type="button" class="options__button button-options">
+												<div class="button-options__img">
+													<img src="@img/generalimg/add.svg" alt="">
+												</div>
+												<span class="button__title">Добавить уровень</span>
+											</button>
+										</div>
+									</details>
+								</div>
+								<div data-spollers class="article__spollers spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title article__subtitle">
+											<span>Количество анимированных объектов</span>
+											<img src="@img/generalimg/arrow-sel.svg" alt="">
+										</summary>
+										<div class="spollers__body options">
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для первого уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для второго уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для третьего уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для четвёртого уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<button type="button" class="options__button button-options">
+												<div class="button-options__img">
+													<img src="@img/generalimg/add.svg" alt="">
+												</div>
+												<span class="button__title">Добавить уровень</span>
+											</button>
+										</div>
+									</details>
+								</div>
+								<div data-spollers class="article__spollers spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title article__subtitle">
+											<span>Количество столбцов</span>
+											<img src="@img/generalimg/arrow-sel.svg" alt="">
+										</summary>
+										<div class="spollers__body options">
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для первого уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для второго уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для третьего уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для четвёртого уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<button type="button" class="options__button button-options">
+												<div class="button-options__img">
+													<img src="@img/generalimg/add.svg" alt="">
+												</div>
+												<span class="button__title">Добавить уровень</span>
+											</button>
+										</div>
+									</details>
+								</div>
+								<div data-spollers class="article__spollers spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title article__subtitle">
+											<span>Минимальное число</span>
+											<img src="@img/generalimg/arrow-sel.svg" alt="">
+										</summary>
+										<div class="spollers__body options">
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для первого уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для второго уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для третьего уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для четвёртого уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<button type="button" class="options__button button-options">
+												<div class="button-options__img">
+													<img src="@img/generalimg/add.svg" alt="">
+												</div>
+												<span class="button__title">Добавить уровень</span>
+											</button>
+										</div>
+									</details>
+								</div>
+								<div data-spollers class="article__spollers spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title article__subtitle">
+											<span>Максимальное число</span>
+											<img src="@img/generalimg/arrow-sel.svg" alt="">
+										</summary>
+										<div class="spollers__body options">
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для первого уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для второго уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для третьего уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<form class="article__form article__form_input-text spollers__form" action="#" method="POST">
+												<div class="article__input-wrapper">
+													<input type="text" class="input input_andbuttons" required>
+													<label class="article__placeholder">Кол-во для четвёртого уровня</label>
+												</div>
+												<div class="article__buttons">
+													<button type="button" class="article__button article__button_minus">
+														<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+														<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+													</button>
+													<button type="button" class="article__button article__button_plus">
+														<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+														<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+													</button>
+												</div>
+											</form>
+											<button type="button" class="options__button button-options">
+												<div class="button-options__img">
+													<img src="@img/generalimg/add.svg" alt="">
+												</div>
+												<span class="button__title">Добавить уровень</span>
+											</button>
+										</div>
+									</details>
+								</div>
 							</article>
-							<article style="height: 1252px;" class="choosegame__item choosegame__item_file-load article cell">3
+							<article class="choosegame__item choosegame__item_texts article cell">
+								<div class="article__row">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/text.svg" alt=""></div>
+										<span class="article__title">Тексты в игре</span>
+									</div>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">fond:</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">timer_To_Start</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">timer_To_End</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">users_Online</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">my_Games</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">my_Wallet</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">buy</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">withdraw</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">my_Rank</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">my_Winnings</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">my_Best_Result</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">rating</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">start_Play</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">start_Training</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
+								<div class="article__texts texts">
+									<span class="texts__title article__subtitle">rating_Message</span>
+									<form class="article__form article__form_input-text" action="#" method="POST">
+										<div class="article__input-wrapper">
+											<input  type="text" class="input" required>
+											<label class="article__placeholder">Напишите название</label>
+										</div>
+									</form>
+								</div>
 							</article>
-							<article style="height: 684px;" class="choosegame__item choosegame__item_file-load article cell">4
+							<article class="choosegame__item choosegame__item_file-load article cell">
+								<div class="article__row">
+									<div class="article__left">
+										<div class="article__img icon"><img src="@img/choosegame/picture.svg" alt=""></div>
+										<span class="article__title">Картинка</span>
+									</div>
+									<div data-da=".load-fale3, 767.98" class="article__actions actions">
+										<button type="button" class="actions__icon actions__icon_del icon">
+											<img class="del__close" src="@img/generalimg/cart.svg" alt="Удалить">
+											<img class="del__open" src="@img/generalimg/cart-open.svg" alt="Удалить">
+										</button>
+										<button type="button" class="actions__icon actions__icon_load icon input-file-btn">
+											<img src="@img/generalimg/load.svg" alt="Загрузить">
+										</button>
+									</div>
+								</div>
+								<form id="form-imgload" class="article__form article__form_input-load load-fale3" action="#" method="POST">
+									<label class="options__label input-file">
+										<span class="input-file-text" type="text"></span>
+										<input id="formImage" type="file" name="file" class="input options__input" placeholder="" required>
+										<label class="article__placeholder">Файл пока что не загружен</label>
+									</label>
+								</form>
+								<div id="formPreview" class="file__Preview"></div>
 							</article>
-							<article style="height: 202px;" class="choosegame__item choosegame__item_file-load article cell">
+							<article class="choosegame__item choosegame__item_file-load article cell">
 								<div class="article__row">
 									<div class="article__left">
 										<div class="article__img icon"><img src="@img/choosegame/crime.svg" alt=""></div>

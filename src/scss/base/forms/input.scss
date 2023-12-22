@@ -44,6 +44,8 @@ textarea {
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
 	}
+	.choosegame__item_file-load &:focus {
+	}
 }
 
 // input:focus ~ .article__placeholder,
@@ -73,7 +75,9 @@ textarea {
 	overflow: hidden;
 	//   line-height: 40px;
 	transition: .3s;
-	
+	.choosegame__item_file-load input:valid+& {
+		display: none;
+	}
 }
 input.input:focus, input.input:not(:focus):valid {
 	padding-top: 30px;
