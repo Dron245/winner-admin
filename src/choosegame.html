@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	@@include('html/_head.htm',{
-	"title":"Настройка турнира / 3"
+	"title":"Настройка турнира"
 	})
 	<body>
 		<div class="wrapper">
@@ -9,30 +9,28 @@
 			<main class="page">
 				<section class="page__choosegame choosegame">
 					<div class="choosegame__container">
-						<!-- <div class="choosegame__top cell">
-							<form class="form-select" action="#" method="POST">
-								<div class="form-select__item-first">
-									<span>Сравнение</span>
-									<div class="form-select__arrow">
-										<img src="@img/generalimg/arrow-sel.svg" alt="">
+						<div data-spollers class="choosegame__top cell spollers">
+							<details class="spollers__item">
+								<summary data-spoller-close class="spollers__title subtitle">
+									<span>Выберите игру</span>
+									<img src="@img/generalimg/arrow-sel.svg" alt="">
+								</summary>
+								<div class="spollers__body">
+									<div class="options__item ">
+									<input autocomplete="off" type="radio" id="o_1" value="1" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
+									<label for="o_1" class="transfer options__label">Примеры</label>
 									</div>
-								</div>
-								<div  class="form-select__drop-menu options">
-									<div class="options__item">
-										<input autocomplete="off" type="radio" id="o_1" value="1" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-										<label for="o_1" class="options__label">Примеры</label>
-									</div>
-									<div class="options__item">
+									<div class="options__item ">
 										<input autocomplete="off" type="radio" id="o_2" value="2" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-										<label for="o_2" class="options__label">Найти число</label>
+										<label for="o_2" class="transfer options__label">Найти число</label>
 									</div>
-									<div class="options__item">
+									<div class="options__item ">
 										<input autocomplete="off" type="radio" id="o_3" value="3" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-										<label for="o_3" class="options__label">Найди большее число</label>
+										<label for="o_3" class="transfer options__label">Найди большее число</label>
 									</div>
-									<div class="options__item">
+									<div class="options__item ">
 										<input autocomplete="off" type="radio" id="o_4" value="4" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-										<label for="o_4" class="options__label">Найди меньшее число</label>
+										<label for="o_4" class="transfer options__label">Найди меньшее число</label>
 									</div>
 									<div class="options__item options__item_button">
 										<button type="button" class="options__button button-options">
@@ -43,8 +41,12 @@
 										</button>
 									</div>
 								</div>
-							</form>
-						</div> -->
+							</details>
+						</div>
+					</div>
+				</section>
+				<section class="page__choosegame choosegame settings">
+					<div class="choosegame__container">
 						<div class="choosegame__row">
 							<article class="choosegame__item article cell">
 								<div class="article__row">
@@ -69,7 +71,7 @@
 								</div>
 								<form class="article__form article__form_input-text" action="#" method="POST">
 									<div class="article__input-wrapper">
-										<input  type="text" class="input" required>
+										<input  type="text" class=" input" required>
 										<label class="article__placeholder">Напишите название</label>
 									</div>
 								</form>
@@ -135,7 +137,7 @@
 								</div>
 								<form class="article__form article__form_input-text" action="#" method="POST">
 									<div class="article__input-wrapper">
-										<input type="text" class="input input_andbuttons" required>
+										<input type="text" class="input  input_andbuttons" required>
 										<label class="article__placeholder">Введите количество</label>
 									</div>
 									<div class="article__buttons">
@@ -1051,19 +1053,19 @@
 												<form class="form-select" action="#" method="POST">
 													<div class="options__item">
 														<input autocomplete="off" type="radio" id="o_5" value="5" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-														<label for="o_5" class="options__label zhetons">10 жетонов</label>
+														<label for="o_5" class="options__label transfer">10 жетонов</label>
 													</div>
 													<div class="options__item">
 														<input autocomplete="off" type="radio" id="o_6" value="6" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-														<label for="o_6" class="options__label zhetons">20 жетонов</label>
+														<label for="o_6" class="options__label transfer">20 жетонов</label>
 													</div>
 													<div class="options__item">
 														<input autocomplete="off" type="radio" id="o_7" value="7" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-														<label for="o_7" class="options__label zhetons">30 жетонов</label>
+														<label for="o_7" class="options__label transfer">30 жетонов</label>
 													</div>
 													<div class="options__item">
 														<input autocomplete="off" type="radio" id="o_8" value="8" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-														<label for="o_8" class="options__label zhetons">40 жетонов</label>
+														<label for="o_8" class="options__label transfer">40 жетонов</label>
 													</div>
 												</form>
 											</div>
@@ -1104,19 +1106,19 @@
 												<form class="form-select" action="#" method="POST">
 													<div class="options__item">
 														<input autocomplete="off" type="radio" id="o_9" value="9" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-														<label for="o_9" class="options__label zhetons">10 жетонов</label>
+														<label for="o_9" class="options__label transfer">10 жетонов</label>
 													</div>
 													<div class="options__item">
 														<input autocomplete="off" type="radio" id="o_10" value="10" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-														<label for="o_10" class="options__label zhetons">20 жетонов</label>
+														<label for="o_10" class="options__label transfer">20 жетонов</label>
 													</div>
 													<div class="options__item">
 														<input autocomplete="off" type="radio" id="o_11" value="11" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-														<label for="o_11" class="options__label zhetons">30 жетонов</label>
+														<label for="o_11" class="options__label transfer">30 жетонов</label>
 													</div>
 													<div class="options__item">
 														<input autocomplete="off" type="radio" id="o_12" value="12" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-														<label for="o_12" class="options__label zhetons">40 жетонов</label>
+														<label for="o_12" class="options__label transfer">40 жетонов</label>
 													</div>
 												</form>
 											</div>
