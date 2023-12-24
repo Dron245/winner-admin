@@ -2,19 +2,53 @@
 import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
-
+	
 document.addEventListener("click", documentActions);
 
 //Появление-скрытие выбора игры в настройках
 function documentActions(e) {
+
 	const targetElement = e.target;
+	
+	// console.log(targetElement);
 	if(targetElement.closest('.form-select__item-first')){
 		document.documentElement.classList.add('select-open');
 	}
 	if(!targetElement.closest('.form-select__item-first') && !targetElement.closest('.options')){
 		document.documentElement.classList.remove('select-open');
 	}
+
+	//Выставляем значение выбора в заголовок и в инпут, закрываем спойлер, открываем блок с настройками
+
+	if(targetElement.closest('.transfer')){
+		let spollerTitle = targetElement.closest('.spollers__item').querySelector('.spollers__title > span');
+		spollerTitle.innerText = targetElement.closest('.options__label').innerText;
+		targetElement.closest('.article__section') ? targetElement.closest('.article__section').classList.add('select-tarif') : null;
+		targetElement.closest('.article__section') ? targetElement.closest('.article__section').querySelector('.input-name').value = targetElement.closest('.options__label').innerText : null;
+		// spollerTitle.innerText = targetElement.closest('.choosegame__item_tarifs').querySelector('.input-name').innerText;
+		// targetElement.closest('.choosegame__item_tarifs').querySelector('.input-name').innerText = targetElement.innerText
+		// targetElement.closest('.spollers__item').querySelector('.spollers__title').classList.remove('_spoller-active');
+		// targetElement.closest('.spollers__body').hidden = true;
+		document.documentElement.classList.add('chois-game-done');
+		targetElement.closest('.spollers__item').open = false;
+		targetElement.closest('.spollers__body').hidden = true;
+		targetElement.closest('.spollers__item').querySelector('.spollers__title').classList.remove('_spoller-active');
+	}
+
+	//Выставляем значение выбора в главной настройке выбора игры
+	// if(targetElement.closest('.top-option') || targetElement.closest('.zhetons')){
+	// 	let spollerTitle = targetElement.closest('.spollers__item').querySelector('.spollers__title > span');
+	// 	spollerTitle.innerText = targetElement.closest('.options__label').innerText;
+	// 	document.documentElement.classList.add('chois-game-done');
+	// 	targetElement.closest('.spollers__item').open = false;
+	// 	targetElement.closest('.spollers__body').hidden = true;
+	// 	targetElement.closest('.spollers__item').querySelector('.spollers__title').classList.remove('_spoller-active');
+	// }
 }
+
+
+
+
 
 //Появление-скрытие кнопок "загрузить удалить" в настройках
 $('.input-file input[type=file]').on('change', function(){
@@ -25,8 +59,13 @@ $('.input-file input[type=file]').on('change', function(){
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-	const form = document.getElementById('form-imgload');
-	form.addEventListener('submit', formSend);
+	
+	if(document.querySelector('#form-imgload')){
+		const form = document.getElementById('form-imgload');
+		form.addEventListener('submit', formSend);
+	}
+
+	
 
 	async function formSend(e) {
 	e.preventDefault();
@@ -59,7 +98,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	//Получаем инпут file в переменную
-	const formImage = document.getElementById('formImage');
+	if (document.querySelector('#formImage')) {
+		const formImage = document.getElementById('formImage');
 	//Получаем див для превью в переменную
 	const formPreview = document.getElementById('formPreview');
 
@@ -67,6 +107,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	formImage.addEventListener('change', () => {
 		uploadFile(formImage.files[0]);
 	});
+	}
+	
 
 
 

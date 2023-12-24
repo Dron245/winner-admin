@@ -19,6 +19,22 @@
 	border-radius: 10px;
 	background-color: $fon;
 }
+
+.title {
+	flex: 1 0 100%;
+	font-size: toRem(24);
+	font-weight: 500;
+	@include adaptiveValue("font-size", 24, 18);
+	@media (max-width:$mobile){
+		//  font-size: toRem(18); 
+	}
+}
+
+.subtitle {
+	@include adaptiveValue("font-size", 18, 12);
+	font-weight: 500;
+}
+
 .wrapper .page .simplebar-vertical {
 	width: 4px;
 	margin-right: 2px;

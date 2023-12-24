@@ -19,6 +19,7 @@ textarea {
 	font-weight: 500;
 	outline: 1px solid $obvodka;
 	background-color: $fon;
+	transition: background-color 0.3s;
 	@media (max-width:$mobile){
 		 height: 48px; 
 	}
@@ -46,28 +47,44 @@ textarea {
 	}
 	.choosegame__item_file-load &:focus {
 	}
+	.article__form-wrapper .article__input-wrapper & {
+		border-radius:0 ;
+	}
+	.article__form-wrapper .article__input-wrapper:first-child & {
+		border-radius:15px 0 0 15px ;
+	}
+	.article__form-wrapper .article__input-wrapper:last-child & {
+		border-radius:0 15px 15px 0;
+	}
+
+	article.choosegame__item_tarifs & {
+		height: 60px;
+		font-size: toRem(12);
+		background-color: $seryy;
+		@media (max-width:$mobile){
+			 font-weight: 400; 
+		}
+	 }
+	 &._input-error {
+		position: relative;
+		border-radius: 15px 0 0 15px;
+		border: 1px solid var(--100, #906969);
+		background: var(--10, rgba(144, 105, 105, 0.10));
+		.article__input-wrapper:last-child &{
+			border-radius: 15px;
+		}
+	 }
 }
 
-// input:focus ~ .article__placeholder,
-// input:not(:focus):valid ~ .article__placeholder{
-//   top: 8px;
-//   bottom: 10px;
-//   left: 20px;
-//   font-size: 11px;
-//   opacity: 1;
-// }
-
-// .inputText {
-//   font-size: 14px;
-//   width: 200px;
-//   height: 35px;
-// }
 
 .article__placeholder {
    position: absolute;
 	pointer-events: none;
 	color:rgba(28, 28, 34, 0.50);
 	left: 20px;
+	@media (max-width:$mobile){
+		 left: 16px; 
+	}
 	right: 15px;
 	top: 50%;
 	transform: translateY(-50%);
@@ -78,13 +95,26 @@ textarea {
 	.choosegame__item_file-load input:valid+& {
 		display: none;
 	}
+	&_one {
+		display: block;
+		@media (max-width:$mobile){
+			 display: none; 
+		}
+	}
+	&_two {
+		display: none;
+		@media (max-width:$mobile){
+			 display: block; 
+		}
+	}
 }
 input.input:focus, input.input:not(:focus):valid {
 	padding-top: 30px;
 	padding-bottom: 10px;
 	@media (max-width:$mobile){
 		 padding-top: 22px;
-		 padding-bottom: 9px; 
+		 padding-bottom: 9px;
+		 
 	}
 }
 input.input:focus~.article__placeholder, input.input:not(:focus):valid~.article__placeholder {
@@ -98,19 +128,13 @@ input.input:focus~.article__placeholder, input.input:not(:focus):valid~.article_
   }
 }
 
-// .input[placeholder]:not([data-placeholder-nohiden]) {
-// 	&::placeholder {
-// 		transition: opacity 0.3s;
-// 	}
-// 	&:focus::placeholder {
-// 		opacity: 0;
-// 	}
-// }
-
 textarea.input {
+	&::placeholder {
+		font-weight: 400;
+	}
 	resize: none;
 	&:hover{
-		background-color: $fon;
+		background-color: $seryy;
 	}
 	&:focus,:not(:focus):valid {
 		padding-top: 20px;

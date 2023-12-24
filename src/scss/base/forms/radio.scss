@@ -35,7 +35,7 @@
 		cursor: pointer;
 		gap: 10px;
 		padding: toRem(24);
-		padding-left: toRem(15);
+		padding-left: toRem(20);
 		@media (max-width:$mobile){
 			font-size: toRem(12);
 			 padding: toRem(16);
@@ -63,7 +63,7 @@
 			border-radius: 50%;
 			background-color: #fff;
 			position: absolute;
-			left: 22px;
+			left: 27px;
 			top: 31px;
 			.article__form_input-load & {
 				display: none;

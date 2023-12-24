@@ -5,6 +5,14 @@
 		
 	}
 }
+
+.settings {
+	display: none;
+	.chois-game-done & {
+		display: block;
+	}
+}
+
 .choosegame {
 
 	&__container {
@@ -55,6 +63,7 @@
 		}
 
 		&_three {
+			// break-inside: avoid-column;
 			@media (max-width:$mobile){
 				 display: grid;
 				 grid-template-columns: 1fr;
@@ -85,11 +94,22 @@
 				}
 			}
 		}
+
 		&_checks {
 			& div.article__row {
 				@media (max-width:$mobile){
 					 margin-bottom: 0; 
 				}
+			}
+		}
+
+		&_texts {
+			break-before: avoid;
+		}
+
+		&_raspred {
+			 form.article__form_input-text {
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -181,20 +201,7 @@
 		}
 	}
 
-	&__title {
-		flex: 1 0 100%;
-		font-size: toRem(24);
-		font-weight: 500;
-		@include adaptiveValue("font-size", 24, 18);
-		@media (max-width:$mobile){
-			//  font-size: toRem(18); 
-		}
-	}
-
-	&__subtitle {
-		@include adaptiveValue("font-size", 18, 12);
-		font-weight: 500;
-	}
+	
 
 	&__help {
 		flex: 1 0 100%;
@@ -223,6 +230,33 @@
 	&__input-wrapper {
 		position:relative;
 		flex:1;
+		.choosegame__item_tarifs & {
+			@media (max-width:$mobile){
+				  &:nth-child(2) {
+					flex: 0 0 30.714286%; /* 86/280 */
+				  }
+			}
+		}
+		.choosegame__item_raspred & {
+			flex: initial;
+			width: 52.025%; /* 167/610 */
+			@media (max-width:$mobile){
+				//  width: 100%;
+				flex: 1;
+			}
+		}
+		&:has(._input-error) {
+			&::after{
+				content:'Ошибка: Название ошибки';
+				color: var(--100, #906969);
+				// font-weight: 400;
+				font-size: toRem(12);
+				position: absolute;
+				top: 105%;
+				left: 0;
+				width: 100%;
+			}
+		}
 	}
 
 	&__buttons {
@@ -252,6 +286,12 @@
 			position: relative;
 			.choosegame__item_texts & {
 				flex: 0 0 59.016393%; /* 360/610 */
+			}
+			.choosegame__item_raspred & {
+				 justify-content: flex-end;
+				 @media (max-width:$mobile){
+					//  justify-content: initial; 
+				 }
 			}
 		}
 
@@ -340,6 +380,12 @@
 		@media (max-width:$mobile){
 			 &:not(:last-child) {margin-bottom: toRem(4);} 
 		}
+		.choosegame__item_tarifs & {
+			// &:not(:last-child) {margin-bottom: toRem(20);}
+		@media (max-width:$mobile){
+			//  &:not(:last-child) {margin-bottom: toRem(8);} 
+		}
+		}
 	}
 
 	&__texts {
@@ -349,6 +395,19 @@
 		&:not(:last-child) {margin-bottom: toRem(16);}
 		@media (max-width:$mobile){
 			display: block;
+		}
+	}
+	&__form-wrapper {
+		display: none;
+		.select-tarif & {
+			display: block;
+		}
+	}
+
+	&__section {
+		&:not(:last-child) {margin-bottom: toRem(16);}
+		@media (max-width:$mobile){
+			 &:not(:last-child) {margin-bottom: toRem(12);} 
 		}
 	}
 }
@@ -428,7 +487,7 @@
 .spollers {
 
 	&__body {
-		max-height: 370px;
+		max-height: 445px;
 		overflow-y: auto;
 		& .options__button {
 			&:not(:last-child) {margin-bottom: toRem(16);}
@@ -438,13 +497,18 @@
 	&__item {
 		border-radius: 15px;
 		border: 1px solid $obvodka;
+		overflow: hidden;
 		transition: background-color 0.3s;
-		padding: 1.25rem;
+		// padding: 1.25rem;
+		.choosegame__top & {
+			border-color: $fon;
+		}
 		@media (max-width:$mobile){
-			 padding: 1rem; 
+			//  padding: 1rem; 
 		}
 		&[open] {
 			background-color: $fon;
+			overflow: hidden;
 		}
 	}
 
@@ -453,32 +517,51 @@
 	}
 
 	&__title {
+		// & > * {outline: 1px solid;}
 		cursor: pointer;
 		list-style: none;
 		display: flex;
 		justify-content: space-between;
-		
-		img {
+		align-items: center;
+		padding: toRem(16) toRem(18) toRem(17) toRem(20);
+	img {
 					transition: transform 0.3s;
 				}
 		&._spoller-active {
 			img {transform: rotate(180deg);}
 		}
-		
+		@media (max-width:$mobile){
+			.choosegame__item_tarifs & {
+				padding-top: toRem(12);
+				padding-bottom: toRem(13);
+			} 
+		}
+		transition: background-color 0.3s;
+			&:hover{
+				background-color: #f4f4f1;
+			}
+		.choosegame__top & {
+			
+		}
 	}
 
 	&__body {
-		margin-top: toRem(35);
+		padding: 1.25rem;
+		.choosegame__top & {
+			padding: 0;
+		}
+		// margin-top: toRem(15);
 		@media (max-width:$mobile){
 			 margin-top: toRem(16); 
+		}
+		.choosegame__item_tarifs & {
+			padding: 0;
 		}
 	}
 
 	&__form {
 		&:not(:last-child) {margin-bottom: toRem(16);}
-		&:last-child{
-			margin-bottom: 20px;
-		}
+		
 		@media (max-width:$mobile){
 			 &:not(:last-child) {margin-bottom: toRem(4);} 
 		}
@@ -490,6 +573,23 @@
 	&__title {
 		@media (max-width:$mobile){
 			 display: block;
+			 margin-bottom: toRem(8);
+			 .choosegame__item_raspred & {
+				margin-bottom: 0;
+			 }
+		}
+	}
+
+	&__subtitle {
+		color: $chernyy;
+		@media (max-width:$mobile){
+			 font-size: toRem(12); 
+		}
+	}
+	&__block {
+		display: flex;
+		flex-direction: column;
+		@media (max-width:$mobile){
 			 margin-bottom: toRem(8); 
 		}
 	}
