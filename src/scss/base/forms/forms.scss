@@ -18,23 +18,23 @@
 
 // <BUTTONS>
 // Сниппет (HTML): btn
- @import "button";
+@import "button";
 
 // <INPUTS>
 // Сниппет (HTML): inp
- @import "input";
+@import "input";
 
 // <CHECK>
 // Сниппет (HTML): chk
- @import "checkbox";
+@import "checkbox";
 
 // <RADIO>
 // Сниппет (HTML): opt
- @import "radio";
+@import "radio";
 
 // <SELECT>
 // Сниппет (HTML): sel
- @import "select";
+@import "select";
 
 // <RATING>
 // Сниппет (HTML): rating
@@ -53,7 +53,6 @@
 // @import "datepicker";
 
 .form-select {
-	
 	&__item-first {
 		display: flex;
 		min-width: 0;
@@ -72,28 +71,28 @@
 		font-weight: 500;
 		height: toRem(60);
 		.select-open & {
-			border-color: #D4D3CF;
+			border-color: #d4d3cf;
 			background-color: $fon;
 			border-bottom-left-radius: 0;
 			border-bottom-right-radius: 0;
 			border-bottom: none;
 		}
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			height: toRem(50);
 			padding: toRem(12) toRem(16) toRem(13) toRem(16);
 		}
 		& img {
 			transition: transform 0.3s;
 			.select-open & {
-				 transform: rotate(180deg);
+				transform: rotate(180deg);
 			}
 		}
-		@media (any-hover: hover){
-			&:hover{
+		@media (any-hover: hover) {
+			&:hover {
 				background-color: #f4f4f1;
 			}
 		}
-		
+
 		&:active {
 			background-color: $fon;
 		}
@@ -110,7 +109,7 @@
 		visibility: hidden;
 		position: absolute;
 		// top: -110%;
-		
+
 		width: 100%;
 		color: #000;
 		background-color: $fon;
@@ -137,7 +136,6 @@
 	}
 }
 .options {
-
 	&__item {
 		flex: 1 0 100%;
 		width: 100%;
@@ -147,17 +145,16 @@
 		&_button {
 			padding: toRem(20);
 			padding-left: toRem(15);
-			@media (max-width:$mobile){
+			@media (max-width: $mobile) {
 				padding-left: toRem(18);
-				 order: -1;
+				order: -1;
 			}
 		}
-		
-		&:hover{
+
+		&:hover {
 			background-color: $seryy;
 			font-weight: 500;
 		}
-		
 	}
 
 	&__input {
@@ -171,27 +168,26 @@
 		align-items: center;
 		column-gap: toRem(16);
 		font-weight: 500;
-		.choosegame__item_spollers & {
+		.module__item_spollers & {
 			margin-top: toRem(8);
 		}
-		.choosegame__item_tarifs & {
+		.module__item_tarifs & {
 			margin: toRem(30) toRem(0) toRem(24) toRem(20);
-			@media (max-width:$mobile){
-				 margin: toRem(0) toRem(0) toRem(18) toRem(20); 
+			@media (max-width: $mobile) {
+				margin: toRem(0) toRem(0) toRem(18) toRem(20);
 			}
 		}
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			order: -1;
-			 column-gap: toRem(8);
-			 font-size: toRem(12);
+			column-gap: toRem(8);
+			font-size: toRem(12);
 		}
 	}
 }
 .button-options {
-
 	&__img {
 		display: flex;
-		
+
 		width: 2.5rem;
 		height: 2.5rem;
 		justify-content: center;
@@ -199,20 +195,19 @@
 		border-radius: 0.625rem;
 		background-color: $mainColor;
 		transition: opacity 0.3s;
-		&:hover{
+		&:hover {
 			opacity: 0.8;
 		}
-		&:active{
+		&:active {
 			opacity: 0.6;
 		}
-		@media (max-width:$mobile){
-			 width: 2rem;
-			 height: 2rem; 
+		@media (max-width: $mobile) {
+			width: 2rem;
+			height: 2rem;
 		}
 	}
 }
 .button {
-
 	&__title {
 	}
 }
@@ -226,13 +221,13 @@
 	display: block;
 	border-radius: 7px;
 	position: relative;
-	&:hover{
+	&:hover {
 		background: $seryy;
 	}
 }
 
 .checkbox__label:after {
-	content: '';
+	content: "";
 	position: absolute;
 	top: 2px;
 	left: 2px;
@@ -260,17 +255,17 @@ input:checked + .checkbox__label:after {
 }
 
 .input-file {
-	@media (max-width:$mobile){
-		 width: 78.571429%; /* 220/280 */
+	@media (max-width: $mobile) {
+		width: 78.571429%; /* 220/280 */
 	}
 	transition: background-color 0.3s;
 	border-radius: 15px;
 	line-height: 20px;
 	height: 60px;
-	@media (max-width:$mobile){
-		 height: 48px; 
+	@media (max-width: $mobile) {
+		height: 48px;
 	}
-	
+
 	outline: 1px solid $obvodka;
 	background-color: $fon;
 }
@@ -284,6 +279,6 @@ input:checked + .checkbox__label:after {
 }
 
 /* Disabled */
-.input-file input[type=file]:disabled {
+.input-file input[type="file"]:disabled {
 	background-color: #eee;
 }

@@ -89,7 +89,7 @@ flsFunctions.isWebp();
 Документация: https://start-template.ru/modul-popup-vytekayushhie-modalnye-okna-chertogi-frilansera-v3-0-0/
 Сниппет (HTML): pl, pop
 */
-// import './libs/popup.js'
+import './libs/popup.js'
 
 /*
 Модуль анимации (параллакс) объектов во время движения мыши

@@ -1,124 +1,16 @@
 //====================================================================================================
 .page {
-
-	&__choosegame {
-		
-	}
-}
-
-.settings {
-	display: none;
-	.chois-game-done & {
-		display: block;
-	}
-}
-
-.choosegame {
-
-	&__container {
-		// outline: 1px solid;
-		
-		// column-fill: auto;
-		margin-top: toRem(64);
-		// column-gap: 2px;
-		// row-gap: 2px;
-		// display: flex;
-		// flex-wrap: wrap;
-		// & >* {
-		// 	flex: 0 0 50%;
-		// }
-		// display: grid;
-		// align-items: start;
-		// gap: toRem(2);
-		// grid-template-columns: 1fr 1fr;
-
+	margin-top: toRem(64);
 		@media (max-width:$mobile){
-			 margin-top: toRem(32);
-			 column-count: 1;
-			 display: flex;
-			 flex-direction: column;
+			 margin-top: toRem(32); 
 		}
-	}
-}
-
-
-.choosegame {
-
-	&__top {
-		margin-bottom: toRem(2);
-	}
-	&__row {
-		column-count: 2;
-		column-gap: toRem(2);
-		@media (max-width:$mobile){
-			display: flex;
-			flex-direction: column; 
-		}
-		&_two {
-			@media (min-width:$mobile){
-				column-count: initial;
-				 display: grid;
-				 grid-template-columns: 1fr 1fr;
-				}
-		}
-
-		&_three {
-			// break-inside: avoid-column;
-			@media (max-width:$mobile){
-				 display: grid;
-				 grid-template-columns: 1fr;
-				 & .article:nth-child(4){
-					grid-row-start: 2;
-				 }
-				//  & :nth-child(2){
-				// 	grid-row-start: 3;
-				//  }
-				//  & :nth-child(5){
-				// 	grid-row-start: 4;
-				//  }
-				//  & :nth-child(6){
-				// 	grid-row-start: 5;
-				//  }
-				 & .article:nth-child(3){
-					grid-row-start: 8;
-				 }
-			}
-		}
-	}
-
-	&__item {
-		&_file-load {
-			& div.article__row {
-				@media (min-width:$mobile){
-					 margin-bottom: toRem(40); 
-				}
-			}
-		}
-
-		&_checks {
-			& div.article__row {
-				@media (max-width:$mobile){
-					 margin-bottom: 0; 
-				}
-			}
-		}
-
-		&_texts {
-			break-before: avoid;
-		}
-
-		&_raspred {
-			 form.article__form_input-text {
-				margin-bottom: 0;
-			}
-		}
+	&__module {
+		
 	}
 }
 
 .article {
-	position: relative;
-	margin-bottom: 2px;
-	break-inside: avoid;
+	
 
 	&__row {
 		// column-count: 2;
@@ -230,14 +122,14 @@
 	&__input-wrapper {
 		position:relative;
 		flex:1;
-		.choosegame__item_tarifs & {
+		.module__item_tarifs & {
 			@media (max-width:$mobile){
 				  &:nth-child(2) {
 					flex: 0 0 30.714286%; /* 86/280 */
 				  }
 			}
 		}
-		.choosegame__item_raspred & {
+		.module__item_raspred & {
 			flex: initial;
 			width: 52.025%; /* 167/610 */
 			@media (max-width:$mobile){
@@ -284,10 +176,10 @@
 			align-items: center;
 			// flex: 1 0 100%;
 			position: relative;
-			.choosegame__item_texts & {
+			.module__item_texts & {
 				flex: 0 0 59.016393%; /* 360/610 */
 			}
-			.choosegame__item_raspred & {
+			.module__item_raspred & {
 				 justify-content: flex-end;
 				 @media (max-width:$mobile){
 					//  justify-content: initial; 
@@ -380,7 +272,7 @@
 		@media (max-width:$mobile){
 			 &:not(:last-child) {margin-bottom: toRem(4);} 
 		}
-		.choosegame__item_tarifs & {
+		.module__item_tarifs & {
 			// &:not(:last-child) {margin-bottom: toRem(20);}
 		@media (max-width:$mobile){
 			//  &:not(:last-child) {margin-bottom: toRem(8);} 
@@ -500,7 +392,7 @@
 		overflow: hidden;
 		transition: background-color 0.3s;
 		// padding: 1.25rem;
-		.choosegame__top & {
+		.module__top & {
 			border-color: $fon;
 		}
 		@media (max-width:$mobile){
@@ -524,6 +416,9 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: toRem(16) toRem(18) toRem(17) toRem(20);
+		@media (max-width:$mobile){
+			 padding: toRem(12) toRem(16) toRem(13) toRem(16); 
+		}
 	img {
 					transition: transform 0.3s;
 				}
@@ -531,7 +426,7 @@
 			img {transform: rotate(180deg);}
 		}
 		@media (max-width:$mobile){
-			.choosegame__item_tarifs & {
+			.module__item_tarifs & {
 				padding-top: toRem(12);
 				padding-bottom: toRem(13);
 			} 
@@ -540,21 +435,21 @@
 			&:hover{
 				background-color: #f4f4f1;
 			}
-		.choosegame__top & {
+		.module__top & {
 			
 		}
 	}
 
 	&__body {
 		padding: 1.25rem;
-		.choosegame__top & {
+		.module__top & {
 			padding: 0;
 		}
 		// margin-top: toRem(15);
 		@media (max-width:$mobile){
 			 margin-top: toRem(16); 
 		}
-		.choosegame__item_tarifs & {
+		.module__item_tarifs & {
 			padding: 0;
 		}
 	}
@@ -574,7 +469,7 @@
 		@media (max-width:$mobile){
 			 display: block;
 			 margin-bottom: toRem(8);
-			 .choosegame__item_raspred & {
+			 .module__item_raspred & {
 				margin-bottom: 0;
 			 }
 		}

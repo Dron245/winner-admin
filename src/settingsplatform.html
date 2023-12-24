@@ -1,67 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 	@@include('html/_head.htm',{
-	"title":"Настройка турнира"
+	"title":"Настроки платформы"
 	})
 	<body>
 		<div class="wrapper">
 			@@include('html/_headersmall.htm',{})
-			<main class="page choosegame">
+			<main class="page settingsplatform">
 				<section class="page__module module">
-					<div class="module__container">
-						<div data-spollers class="module__top article spollers">
-							<details class="spollers__item">
-								<summary data-spoller-close class="spollers__title subtitle">
-									<span>Выберите игру</span>
-									<img src="@img/generalimg/arrow-sel.svg" alt="">
-								</summary>
-								<div class="spollers__body">
-									<a href="#" class="options__item ">
-									<input autocomplete="off" type="radio" id="o_1" value="1" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-									<label for="o_1" class="transfer options__label">Примеры</label>
-									</a>
-									<a href="#" class="options__item ">
-										<input autocomplete="off" type="radio" id="o_2" value="2" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-										<label for="o_2" class="transfer options__label">Найти число</label>
-									</a>
-									<a href="#" class="options__item ">
-										<input autocomplete="off" type="radio" id="o_3" value="3" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-										<label for="o_3" class="transfer options__label">Найди большее число</label>
-									</a>
-									<a href="#" class="options__item ">
-										<input autocomplete="off" type="radio" id="o_4" value="4" name="form[]" data-error="Ошибка" placeholder="" class="options__input">
-										<label for="o_4" class="transfer options__label">Найди меньшее число</label>
-									</a>
-									<div class="options__item options__item_button">
-										<button type="button" class="options__button button-options">
-											<div class="button-options__img">
-												<img src="@img/generalimg/add.svg" alt="">
-											</div>
-											<span class="button__title">Создать новую игру</span>
-										</button>
-									</div>
-								</div>
-							</details>
-						</div>
-					</div>
-				</section>
-				<section class="page__module module settings">
 					<div class="module__container">
 						<div class="module__row">
 							<article class="module__item article ">
 								<div class="article__row">
 									<div class="article__left">
-										<div class="article__img icon"><img src="@img/choosegame/check.svg" alt=""></div>
-										<span class="title">Активность</span>
-									</div>
-									<form class="article__form" action="#" method="POST">
-										<div class="checkbox article__checkbox-wrapper">
-											<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-											<label for="c_1" class="checkbox__label"><span class="checkbox__text">Текст</span></label>
+										<div class="article__img icon"><img src="@img/settingsplatform/upravl.svg" alt=""></div>
+										<div class="title-block">
+											<div class="title-block__left">
+											<span class="title">Управление</span><br>
+											<span class="help-article__subtext">IP-адресами</span>
 										</div>
-									</form>
+											<div class="title-block__right">
+												<a href="#" class="title-block__link">Посмотреть историю</a>
+											</div>
+										</div>
+									</div>
 								</div>
+								<form class="article__form article__form_input-text" action="#" method="POST">
+									<div class="article__input-wrapper">
+										<input type="text" class="input  input_andbuttons" required>
+										<label class="article__placeholder">Введите количество</label>
+									</div>
+									<div class="article__buttons">
+										<button type="button" class="article__button article__button_minus">
+											<img class="bigimg"  src="@img/generalimg/minus.svg" alt="минус">
+											<img class="smallimg"  src="@img/generalimg/minus-small.svg" alt="минус">
+										</button>
+										<button type="button" class="article__button article__button_plus">
+											<img class="bigimg" src="@img/generalimg/plus.svg" alt="плюс">
+											<img class="smallimg" src="@img/generalimg/plus-small.svg" alt="плюс">
+										</button>
+									</div>
+								</form>
 							</article>
+
+
+
+
+
+
+
+
+
 							<article class="module__item article ">
 								<div class="article__row">
 									<div class="article__left">

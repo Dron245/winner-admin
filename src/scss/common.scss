@@ -1,8 +1,11 @@
 // Заголовки, общие БЄМ блоки и прочее...
-.cell{
+.article{
 	padding: toRem(20);
 	border-radius: toRem(20);
 	background-color: #fff;
+	position: relative;
+	margin-bottom: 2px;
+	break-inside: avoid;
 	@media (max-width:$mobile){
 		 padding: toRem(16);
 		 border-radius: toRem(15); 
@@ -18,6 +21,13 @@
 	align-items: center;
 	border-radius: 10px;
 	background-color: $fon;
+}
+
+.settings {
+	display: none;
+	.choose-game-done & {
+		display: block;
+	}
 }
 
 .title {

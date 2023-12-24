@@ -2,34 +2,34 @@
 import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
-	
+
 document.addEventListener("click", documentActions);
 
 //Появление-скрытие выбора игры в настройках
 function documentActions(e) {
 
 	const targetElement = e.target;
-	
+
 	// console.log(targetElement);
-	if(targetElement.closest('.form-select__item-first')){
+	if (targetElement.closest('.form-select__item-first')) {
 		document.documentElement.classList.add('select-open');
 	}
-	if(!targetElement.closest('.form-select__item-first') && !targetElement.closest('.options')){
+	if (!targetElement.closest('.form-select__item-first') && !targetElement.closest('.options')) {
 		document.documentElement.classList.remove('select-open');
 	}
 
 	//Выставляем значение выбора в заголовок и в инпут, закрываем спойлер, открываем блок с настройками
 
-	if(targetElement.closest('.transfer')){
+	if (targetElement.closest('.transfer')) {
 		let spollerTitle = targetElement.closest('.spollers__item').querySelector('.spollers__title > span');
 		spollerTitle.innerText = targetElement.closest('.options__label').innerText;
 		targetElement.closest('.article__section') ? targetElement.closest('.article__section').classList.add('select-tarif') : null;
 		targetElement.closest('.article__section') ? targetElement.closest('.article__section').querySelector('.input-name').value = targetElement.closest('.options__label').innerText : null;
-		// spollerTitle.innerText = targetElement.closest('.choosegame__item_tarifs').querySelector('.input-name').innerText;
-		// targetElement.closest('.choosegame__item_tarifs').querySelector('.input-name').innerText = targetElement.innerText
+		// spollerTitle.innerText = targetElement.closest('.module__item_tarifs').querySelector('.input-name').innerText;
+		// targetElement.closest('.module__item_tarifs').querySelector('.input-name').innerText = targetElement.innerText
 		// targetElement.closest('.spollers__item').querySelector('.spollers__title').classList.remove('_spoller-active');
 		// targetElement.closest('.spollers__body').hidden = true;
-		document.documentElement.classList.add('chois-game-done');
+		document.documentElement.classList.add('choose-game-done');
 		targetElement.closest('.spollers__item').open = false;
 		targetElement.closest('.spollers__body').hidden = true;
 		targetElement.closest('.spollers__item').querySelector('.spollers__title').classList.remove('_spoller-active');
@@ -51,7 +51,7 @@ function documentActions(e) {
 
 
 //Появление-скрытие кнопок "загрузить удалить" в настройках
-$('.input-file input[type=file]').on('change', function(){
+$('.input-file input[type=file]').on('change', function () {
 	let file = this.files[0];
 	$('.actions__icon_del').addClass('_view');
 	$('.actions__icon_load').addClass('_hidden');
@@ -59,37 +59,37 @@ $('.input-file input[type=file]').on('change', function(){
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-	
-	if(document.querySelector('#form-imgload')){
+
+	if (document.querySelector('#form-imgload')) {
 		const form = document.getElementById('form-imgload');
 		form.addEventListener('submit', formSend);
 	}
 
-	
+
 
 	async function formSend(e) {
-	e.preventDefault();
+		e.preventDefault();
 
-	let error = formValidate(form);
+		let error = formValidate(form);
 
-	let formData = new FormData(form);
-	formData.append('image', formImage.files[0]);
+		let formData = new FormData(form);
+		formData.append('image', formImage.files[0]);
 
-	if (error === 0) {
-		form.classList.add('_sending');
-		let response = await fetch('sendmail.php', {
-			method: 'POST',
-			body: formData
-		});
-		if (response.ok) {
-			let result = await response.json();
-			alert(result.message);
-			formPreview.innerHTML = '';
-			form.reset();
-			form.classList.remove('_sending');
-		} else {
-			alert("Ошибка");
-			form.classList.remove('_sending');
+		if (error === 0) {
+			form.classList.add('_sending');
+			let response = await fetch('sendmail.php', {
+				method: 'POST',
+				body: formData
+			});
+			if (response.ok) {
+				let result = await response.json();
+				alert(result.message);
+				formPreview.innerHTML = '';
+				form.reset();
+				form.classList.remove('_sending');
+			} else {
+				alert("Ошибка");
+				form.classList.remove('_sending');
 			}
 		} else {
 			alert('Заполните обязательные поля');
@@ -100,15 +100,15 @@ document.addEventListener('DOMContentLoaded', function () {
 	//Получаем инпут file в переменную
 	if (document.querySelector('#formImage')) {
 		const formImage = document.getElementById('formImage');
-	//Получаем див для превью в переменную
-	const formPreview = document.getElementById('formPreview');
+		//Получаем див для превью в переменную
+		const formPreview = document.getElementById('formPreview');
 
-	//Слушаем изменения в инпуте file
-	formImage.addEventListener('change', () => {
-		uploadFile(formImage.files[0]);
-	});
+		//Слушаем изменения в инпуте file
+		formImage.addEventListener('change', () => {
+			uploadFile(formImage.files[0]);
+		});
 	}
-	
+
 
 
 

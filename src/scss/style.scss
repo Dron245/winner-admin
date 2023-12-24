@@ -167,6 +167,7 @@ body {
 
 // Подключение стилей общих элементов проекта
 @import "common";
+@import "module";
 
 // Подключение стилей отдельных блоков
 @import "header";
@@ -175,4 +176,4 @@ body {
 // Подключение стилей отдельных страниц
 // @import "home";
 @import "choosegame";
-// @import "choosegame3";
+ @import "settingsplatform";
