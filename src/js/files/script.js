@@ -35,6 +35,12 @@ function documentActions(e) {
 		targetElement.closest('.spollers__item').querySelector('.spollers__title').classList.remove('_spoller-active');
 	}
 
+	// В блоке тарифная сетка вставляем значение выбранного тарифа в соответствующий инпут
+
+	if(targetElement.closest('.option-tarif')){
+		targetElement.closest('.article__section').querySelector('.article__input-wrapper_value input').value = targetElement.value;
+	}
+
 	//Выставляем значение выбора в главной настройке выбора игры
 	// if(targetElement.closest('.top-option') || targetElement.closest('.zhetons')){
 	// 	let spollerTitle = targetElement.closest('.spollers__item').querySelector('.spollers__title > span');
